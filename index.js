@@ -1,8 +1,9 @@
+// create bot & add token from botfather
 const TelegramBot = require('node-telegram-bot-api');
-
 const token = '1675308278:AAEYrIw2-rTwuxbGcS-BybSo8ESmneRO2Vg';
-
 const bot = new TelegramBot(token, {polling: true});
+
+
 
 bot.onText(/\/echo (.+)/, (msg, match) => {
 
@@ -13,7 +14,8 @@ bot.onText(/\/echo (.+)/, (msg, match) => {
 });
 
 bot.on('message', (msg) => {
+  console.log(msg);
   const chatId = msg.chat.id;
 
-  bot.sendMessage(chatId, 'Получили твое сообщение! Спасибо!');
+  bot.sendMessage(chatId, `Получили твое сообщение, ` + msg.from.first_name);
 });
