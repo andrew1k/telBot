@@ -1,21 +1,57 @@
 // create bot & add token from botfather
 const TelegramBot = require('node-telegram-bot-api');
 const token = '1675308278:AAEYrIw2-rTwuxbGcS-BybSo8ESmneRO2Vg';
-const bot = new TelegramBot(token, {polling: true});
+const debug = require('./helpers')
 
+console.log('Bot has been started...');
 
+const bot = new TelegramBot(token, {polling: {
+  interval: 300,
+  autoStart: true,
+  params: {
+    timeout: 10
+  },
+}});
 
-bot.onText(/\/echo (.+)/, (msg, match) => {
-
-  const chatId = msg.chat.id;
-  const resp = match[1]; // the captured "whatever"
-
-  bot.sendMessage(chatId, resp);
-});
-
-bot.on('message', (msg) => {
-  console.log(msg);
-  const chatId = msg.chat.id;
-
-  bot.sendMessage(chatId, `Получили твое сообщение, ` + msg.from.first_name);
-});
+bot.on('message', msg => {
+    const chatId = msg.chat.id
+    const txt = msg.text
+ 
+    // Calendar
+    if (txt === 'Календарь Событий') {
+        bot.sendMessage(chatId, `📆 СОБЫТИЯ ЭТОГО МЕСЯЦА
+Вы можете узнать актуальную информацию о мероприятиях церкви и добавить их в свой календарь, перейдя по ссылке с нужным мероприятием.`, {
+            reply_markup: {
+                keyboard: [
+                    [`🎲 ВЕЧЕР НАСТОЛЬНЫХ ИГР`],
+                    [`🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА`],
+                    [`🏘 МОЛОДЕЖНЫЙ ВЫЕЗД`],
+                    ['Назад']
+                ]
+            }
+        })
+    } else if (txt === 'Молитвенное') {
+        console.log('Praying');
+    } else if (txt === 'Вопрос') {
+        console.log('FAQ');
+    } else if (txt === `🎲 ВЕЧЕР НАСТОЛЬНЫХ ИГР`) {
+        console.log('Games');
+    } else if (txt === `🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА`) {
+        console.log('Pray');    
+    } else if (txt === `🏘 МОЛОДЕЖНЫЙ ВЫЕЗД`) {
+        console.log('Out');
+    }
+    
+    
+    
+    else {
+        bot.sendMessage(chatId, 'Main menu', {
+            reply_markup: {
+                keyboard: [
+                    ['Календарь Событий'],
+                    ['Молитвенное', 'Вопрос']
+                ]
+            }
+        })
+    }
+})
