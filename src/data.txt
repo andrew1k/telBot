@@ -1,0 +1,18 @@
+//  if (msg.text !== kb.smallGroups.sgLeader && msg.text !== kb.smallGroups.sgMap && msg.text !== kb.smallGroups.goHome && msg.text !== kb.smallGroups.sgMember) {
+//     bot.on('message', msg => {
+//         bot.forwardMessage(idAdmin, chatId, msg.message_id)
+//         fs.writeFileSync('./data.txt', helper.debug(`Сообщение от вкладки 'Хочу стать участником Малой Группы' от ${msg.from.username}, текст: ${msg.text}`))
+//         console.log(helper.debug(`Сообщение из 'Хочу стать участником Малой Группы' от ${msg.from.username}, текст: ${msg.text}`))
+//     })
+//  }
+
+// bot.on('message', msg => {
+//     bot.forwardMessage(idAdmin, chatId, msg.message_id)
+//     .then(() => {
+        
+//         console.log(helper.debug(`Сообщение из 'Хочу стать участником Малой Группы' от ${msg.from.username}, текст: ${msg.text}`))
+//         // bot.sendMessage(chatId, 'Спасибо! Мы обязательно свяжемся с вами в ближайшее время.')
+//         // console.log(helper.debug(msg));
+//     })
+//     .catch((err) => {console.log(err);})
+// })
