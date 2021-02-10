@@ -1,5 +1,5 @@
 const kb = require('./keyboard-buttons')
-
+// Keyboard 
 module.exports = {
     home: [
         [kb.home.calendar],
@@ -21,7 +21,8 @@ module.exports = {
         [kb.smallGroups.goHome],
     ],
     serv: [
-        [kb.serv.servAll, kb.serv.servHire,],
+        [kb.serv.servAll],
+        [kb.serv.servHire],
         [kb.serv.servunknown],
         [kb.serv.goHome],
     ],
