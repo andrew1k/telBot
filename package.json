@@ -10,7 +10,6 @@
   "author": "Andrew Ko (https://github.com/andrew1k)",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^5.11.15",
     "node-telegram-bot-api": "^0.51.0"
   }
 }
