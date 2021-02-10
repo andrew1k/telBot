@@ -14,7 +14,8 @@ const {
     kStringMaxLength
 } = require('buffer')
 const { createBrotliCompress } = require('zlib')
-helper.logStart()
+
+//helper.logStart()
 
 // /start button listner
 bot.onText(/\/start/, msg => {
@@ -372,7 +373,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/sadf',
+                            url: 't.me/marismir05',
                         }]
                     ]
                 }
