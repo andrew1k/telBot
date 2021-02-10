@@ -4,24 +4,7 @@ const helper = require('./helper')
 const bot = new TelegramBot(config.token, {
     polling: true
 })
-
-// DB ==========================
-// const mongoose = require('mongoose')
-
-// mongoose.connect(config.DB_URL).then(() => {console.log('DB Successfully added...');})
-//                                .catch((err) => {console.log(err);})
-
-// const Schema = mongoose.Schema
-
-// const userScheme = new Schema({
-//     userName: String,
-//     UserText: String,
-//     formFrom: String,
-// });
-
-// const UserReply = mongoose.model('UserReply', userScheme)
-// DB ==========================
-
+const files = require('./files')
 const kb = require('./keyboard-buttons')
 const keyboard = require('./keyboard')
 const messages = require('./button-messages')
@@ -30,19 +13,20 @@ const fs = require('fs')
 const {
     kStringMaxLength
 } = require('buffer')
+const { createBrotliCompress } = require('zlib')
+helper.logStart()
 
-// let SGL = [] // Small Group Leader
-// let SGM = [] // Small Group Member
-// let FAQ = [] // Frequently Asked Questions
-// let SERVUN = [] // Serv Unknown
-// let PRAYFORM = [] // Pray form
-// let SERVHI = [] // Serv Hire
-// let OPOS = [] // One Plus One Student
-// let OPOM = [] // Ono Plus One Mentor
+// /start button listner
+bot.onText(/\/start/, msg => {
+    const chatId = helper.getChatId(msg)
+    bot.sendMessage(chatId, messages.startBntAction, {
+        reply_markup: {
+            keyboard: keyboard.home
+        }
+    })
+})
 
-// helper.logStart()
-
-
+// Action Listner 
 bot.on('message', msg => {
     const chatId = helper.getChatId(msg)
 
@@ -88,7 +72,7 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.respondBtn,
+                            text: `${kb.respondBtn} нам`,
                             url: kb.respondUrl,
                         }]
                     ]
@@ -100,7 +84,7 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.respondBtn,
+                            text: `${kb.respondBtn} нам`,
                             url: kb.respondUrl,
                         }]
                     ]
@@ -114,13 +98,13 @@ bot.on('message', msg => {
                 }
             })
             bot.sendMessage(chatId, `🔥 Начните с книжки пастора Даниила Шатрова ‘Сила Малой Группы’.`)
-            bot.sendDocument(chatId, '../materials/Сила Малой группы.pdf')
+            bot.sendDocument(chatId, files.materialsForSG.danBook)
             break
 
             // Calendar =====================================================================================
             // Item 1
         case kb.calendar.game:
-            bot.sendPhoto(chatId, 'https://sun9-3.userapi.com/impf/9bnoBwrT-M-M-WAMZXBpn7-mnW7t7mdByzFz_Q/gkOBm2nu5z4.jpg?size=1280x852&quality=96&proxy=1&sign=ef00fb957e41677af08414b22f32faa9&type=album', {
+            bot.sendPhoto(chatId, files.calendarPic1, {
                 caption: messages.calendarObj.game,
                 reply_markup: {
                     inline_keyboard: [
@@ -138,7 +122,7 @@ bot.on('message', msg => {
 
             // Item 2
         case kb.calendar.pray:
-            bot.sendPhoto(chatId, 'https://sun9-51.userapi.com/impf/aEtrt6aeHPM1y5qSF3EzEzDS81dX9Rc302Ar_w/_kfUJEx9z5U.jpg?size=1080x1080&quality=96&proxy=1&sign=f4871801a45271b5885026cfdd9a1ef4&type=album', {
+            bot.sendPhoto(chatId, files.calendarPic2, {
                 caption: messages.calendarObj.pray,
                 reply_markup: {
                     inline_keyboard: [
@@ -156,26 +140,35 @@ bot.on('message', msg => {
 
             // Item 3
         case kb.calendar.turnout:
-            bot.sendPhoto(chatId, 'https://sun9-44.userapi.com/impf/xEiGK5r-3_b73XX2AmKh7laQE-2zDV0tVIMv6w/t7S6UNoi--Y.jpg?size=1080x1080&quality=96&proxy=1&sign=02fded5853eb7b5bbbb28d5e9342ed86&type=album', {
+            bot.sendPhoto(chatId, files.calendarPic3, {
                 caption: messages.calendarObj.turnout,
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.apple,
-                            url: kb.appleItemThird
-                        }, {
-                            text: kb.google,
-                            url: kb.googleItemThird
+                            text: kb.signUpBtn,
+                            url: kb.signUpUrl,
+                        }
+                    ]]
+                }
+            })
+            break
+        case kb.calendar.teaWithPastor:
+            bot.sendPhoto(chatId, files.calendarPic4, {
+                caption: messages.calendarObj.teaWithPastor,
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.signUpBtn,
+                            url: kb.signUpUrl,
                         }]
                     ]
                 }
-            }) // .then(() => {console.log('All Right');})
-            // .catch((err) => {console.log(err);})
+                })
             break
 
             // Go Home
         case kb.calendar.goHome:
-            bot.sendMessage(chatId, `🌐 Главное меню`, {
+            bot.sendMessage(chatId, kb.homeBtn, {
                 reply_markup: {
                     keyboard: keyboard.home
                 }
@@ -194,13 +187,7 @@ bot.on('message', msg => {
                     ]
                 }
             })
-            // if (msg.text !== kb.smallGroups.sgLeader && msg.text !== kb.smallGroups.sgMap && msg.text !== kb.smallGroups.goHome) {
-            //     bot.on('message', msg => {
-            //         bot.forwardMessage(idAdmin, chatId, msg.message_id)
-            //         fs.writeFileSync('./data.txt', helper.debug(`Сообщение от вкладки 'Хочу стать участником Малой Группы' от ${msg.from.username}, текст: ${msg.text}`))
-            //         console.log(helper.debug(`Сообщение из 'Хочу стать участником Малой Группы' от ${msg.from.username}, текст: ${msg.text}`))
-            //     })
-            // }
+
             break
 
         case kb.smallGroups.sgLeader:
@@ -221,8 +208,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Карта Малых Групп',
-                            url: 'https://yandex.ru/maps/?um=constructor%3A35dad1dc46caf371e7d494ce0a91041adc121c5fde390dd1c7217bd6faee2a13&source=constructorLink'
+                            text: kb.sgMap_inline,
+                            url: files.mapUrl
                         }]
                     ]
                 }
@@ -253,15 +240,19 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.respondBtn,
+                            text: `Откликнуться`,
                             url: kb.respondUrl,
                         }]
                     ]
                 }
-            })
-            bot.sendMessage(chatId, `🔹 Графический дизайнер`)
-            bot.sendMessage(chatId, `🔹 Копирайтер (написание текстов)`)
-            bot.sendMessage(chatId, `🔹 Контент-мейкер`)
+            }).then(() => { 
+                bot.sendMessage(chatId, messages.servHireSecondText)
+                    .then(() => {
+                        bot.sendMessage(chatId, `🔹 Графического дизайнера`)
+                        bot.sendMessage(chatId, `🔹 Копирайтера (написание текстов)`)
+                        bot.sendMessage(chatId, `🔹 Контент-мейкера`)
+                    })
+                })
             break
 
             // Serv Unknown
@@ -280,7 +271,7 @@ bot.on('message', msg => {
 
             // Go Home
         case kb.serv.goHome:
-            bot.sendMessage(chatId, `🌐 Главное меню`, {
+            bot.sendMessage(chatId, kb.homeBtn, {
                 reply_markup: {
                     keyboard: keyboard.home
                 }
@@ -293,7 +284,12 @@ bot.on('message', msg => {
         case kb.servAll.servMyGeneration:
             bot.sendMessage(chatId, messages.servAllObj.servMyGeneration, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/spb_alexandr_petrov1'
+                        }]
+                    ]
                 }
             })
             break
@@ -302,7 +298,12 @@ bot.on('message', msg => {
         case kb.servAll.servWorship:
             bot.sendMessage(chatId, messages.servAllObj.servWorship, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/emiliya_nikolaeva'
+                        }]
+                    ] 
                 }
             })
             break
@@ -311,7 +312,12 @@ bot.on('message', msg => {
         case kb.servAll.servInfo:
             bot.sendMessage(chatId, messages.servAllObj.servInfo, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/sadf'
+                        }]
+                    ]
                 }
             })
             break
@@ -320,7 +326,12 @@ bot.on('message', msg => {
         case kb.servAll.servCafe:
             bot.sendMessage(chatId, messages.servAllObj.servCafe, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/sadf'
+                        }]
+                    ]
                 }
             })
             break
@@ -329,7 +340,12 @@ bot.on('message', msg => {
         case kb.servAll.servAsher:
             bot.sendMessage(chatId, messages.servAllObj.servAsher, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/arsentev'
+                        }]
+                    ]
                 }
             })
             break
@@ -338,7 +354,12 @@ bot.on('message', msg => {
         case kb.servAll.servCommunion:
             bot.sendMessage(chatId, messages.servAllObj.servCommunion, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/sadf'
+                        }]
+                    ]
                 }
             })
             break
@@ -347,7 +368,12 @@ bot.on('message', msg => {
         case kb.servAll.servChild:
             bot.sendMessage(chatId, messages.servAllObj.servChild, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/sadf'
+                        }]
+                    ]
                 }
             })
             break
@@ -356,7 +382,12 @@ bot.on('message', msg => {
         case kb.servAll.servComunication:
             bot.sendMessage(chatId, messages.servAllObj.servComunication, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/vitalik_golikov'
+                        }]
+                    ]
                 }
             })
             break
@@ -365,7 +396,12 @@ bot.on('message', msg => {
         case kb.servAll.servMeeting:
             bot.sendMessage(chatId, messages.servAllObj.servMeeting, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/vitalik_golikov'
+                        }]
+                    ]
                 }
             })
             break
@@ -374,7 +410,12 @@ bot.on('message', msg => {
         case kb.servAll.servSocialWeb:
             bot.sendMessage(chatId, messages.servAllObj.servSocialWeb, {
                 reply_markup: {
-                    keyboard: keyboard.servAll
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: 't.me/vitalik_golikov'
+                        }]
+                    ]
                 }
             })
             break
@@ -416,7 +457,7 @@ bot.on('message', msg => {
             })
             break
         case kb.teaching.goHome:
-            bot.sendMessage(chatId, `🌐 Главное меню`, {
+            bot.sendMessage(chatId, kb.homeBtn, {
                 reply_markup: {
                     keyboard: keyboard.home
                 }
@@ -456,15 +497,15 @@ bot.on('message', msg => {
             })
             break
 
-            // Materials For Small Groups ==============================================================
+            // Materials For Small Groups ==============================================================================
         case kb.materialsForSG.msgHelp:
             bot.sendMessage(chatId, messages.materialsForSGObj.msgHelp, {
                 reply_markup: {
                     keyboard: keyboard.materialsForSG
                 }
             })
-            bot.sendDocument(chatId, './materials/Советы для ведущих.docx')
-            bot.sendDocument(chatId, './materials/Ценности МГ.docx')
+            bot.sendDocument(chatId, files.materialsForSG.msgHelp.doc1)
+            bot.sendDocument(chatId, files.materialsForSG.msgHelp.doc2)
             break
         case kb.materialsForSG.msgNotes:
             bot.sendMessage(chatId, messages.materialsForSGObj.msgNotes, {
@@ -492,10 +533,11 @@ bot.on('message', msg => {
                 reply_markup: {
                     keyboard: keyboard.materialsForSG
                 }
-            })
+            }).then(() => {
             bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid2)
             bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid3)
             bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid4)
+            })
             break
         case kb.materialsForSG.msgMeetings:
             bot.sendMessage(chatId, messages.materialsForSGObj.msgMeetings, {
@@ -505,29 +547,17 @@ bot.on('message', msg => {
             })
             break
         case kb.materialsForSG.goHome:
-            bot.sendMessage(chatId, `🌐 Главное меню`, {
+            bot.sendMessage(chatId, kb.homeBtn, {
                 reply_markup: {
                     keyboard: keyboard.home
                 }
             })
             break
         default:
-            bot.sendMessage(chatId, `🌐 Главное меню`, {
+            bot.sendMessage(chatId, kb.homeBtn, {
                 reply_markup: {
                     keyboard: keyboard.home
                 }
             })
-
     }
-})
-
-bot.onText(/\/start/, msg => {
-    bot.sendMessage(helper.getChatId(msg), `Добро пожаловать в telegram bot молодёжного служения церкви "Миссия Благая Весть"! 
-
-    Здесь Вы можете узнать всю актуальную информацию о ближайших событиях церкви, стать частью Малой Группы и других служений, записаться на Чай с пастором и другие мероприятия.
-    `, {
-        reply_markup: {
-            keyboard: keyboar.home
-        }
-    })
 })

@@ -12,7 +12,8 @@ module.exports = {
         [kb.calendar.game],
         [kb.calendar.pray],
         [kb.calendar.turnout],
-        [kb.calendar.goHome]
+        [kb.calendar.teaWithPastor],
+        [kb.calendar.goHome],
     ],
     smallGroups: [
         [kb.smallGroups.sgMember],

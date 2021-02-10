@@ -1,4 +1,6 @@
+// Screens
 module.exports = {
+    homeBtn: `🌐 Главное меню`,
     home: {
         calendar: `📆 Календарь событий`,
         smallGroups: `🏠 Малые Группы`,
@@ -13,6 +15,7 @@ module.exports = {
         game: `🎲 Вечер настольных игр`,
         pray: `🙏🏻 Молодежная молитва`,
         turnout: `🏘 Молодежный выезд`,
+        teaWithPastor: '☕️ Чай с Пастором',
         goHome: `🌐 Главное меню`,
     },
     smallGroups: {
@@ -65,6 +68,8 @@ module.exports = {
     },
     // Inline keyboards
 
+    sgMap_inline: 'Карта Малых Групп',
+
     // Calendar inline_keyboard
     apple: 'Apple',
     google: 'Google',
@@ -80,11 +85,18 @@ module.exports = {
     // Fourth Item
     appleItemFourth: '',
     googleItemFourth: '',
-
+    // Fifth Item
     appleItemFifth: '',
     googleItemFifth: '',
 
     // Respond inline_keyboard
-    respondBtn: 'Откликнуться',
-    respondUrl: 'https://t.me/nesilchuk',
+    respondBtn: 'Написать',
+    respondUrl: 'https://t.me/mbvyouthadmin',
+
+    // Vitalik 
+    signUpBtn: 'Записаться',
+    signUpUrl: 't.me/vitalik_golikov',
+
+    // Serv All
+    writeLeader: `Написать лидеру служения`,
 }
