@@ -64,16 +64,27 @@ module.exports = {
         goHome: `🌐 Главное меню`,
     },
     // Inline keyboards
+
+    // Calendar inline_keyboard
     apple: 'Apple',
     google: 'Google',
+    // First Item
     appleItemFirst: 'https://calndr.link/e/zugSJAhom2?s=apple',
-    appleItemSecond: 'https://calndr.link/e/G4ndn8F16R?s=apple',
-    appleItemThird: 'https://calndr.link/e/sQhGjGFwtF?s=apple',
-    appleItemFourth: '',
-    appleItemFifth: '',
     googleItemFirst: 'https://calndr.link/e/zugSJAhom2?s=google',
+    // Second Item
+    appleItemSecond: 'https://calndr.link/e/G4ndn8F16R?s=apple',
     googleItemSecond: 'https://calndr.link/e/G4ndn8F16R?s=google',
+    // Third Item
+    appleItemThird: 'https://calndr.link/e/sQhGjGFwtF?s=apple',
     googleItemThird: 'https://calndr.link/e/sQhGjGFwtF?s=google',
+    // Fourth Item
+    appleItemFourth: '',
     googleItemFourth: '',
+
+    appleItemFifth: '',
     googleItemFifth: '',
+
+    // Respond inline_keyboard
+    respondBtn: 'Откликнуться',
+    respondUrl: 'https://t.me/nesilchuk',
 }

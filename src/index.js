@@ -88,8 +88,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Откликнуться',
-                            url: 'https://t.me/nesilchuk'
+                            text: kb.respondBtn,
+                            url: kb.respondUrl,
                         }]
                     ]
                 }
@@ -100,8 +100,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Откликнуться',
-                            url: 'https://t.me/nesilchuk'
+                            text: kb.respondBtn,
+                            url: kb.respondUrl,
                         }]
                     ]
                 }
@@ -188,8 +188,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Откликнуться',
-                            url: 'https://t.me/nesilchuk'
+                            text: kb.respondBtn,
+                            url: kb.respondUrl,
                         }]
                     ]
                 }
@@ -208,8 +208,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Откликнуться',
-                            url: 'https://t.me/nesilchuk'
+                            text: kb.respondBtn,
+                            url: kb.respondUrl,
                         }]
                     ]
                 }
@@ -253,8 +253,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Откликнуться',
-                            url: 'https://t.me/nesilchuk'
+                            text: kb.respondBtn,
+                            url: kb.respondUrl,
                         }]
                     ]
                 }
@@ -270,8 +270,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Откликнуться',
-                            url: 'https://t.me/nesilchuk'
+                            text: kb.respondBtn,
+                            url: kb.respondUrl,
                         }]
                     ]
                 }
@@ -429,8 +429,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Откликнуться',
-                            url: 'https://t.me/nesilchuk'
+                            text: kb.respondBtn,
+                            url: kb.respondUrl,
                         }]
                     ]
                 }
@@ -441,8 +441,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Откликнуться',
-                            url: 'https://t.me/nesilchuk'
+                            text: kb.respondBtn,
+                            url: kb.respondUrl,
                         }]
                     ]
                 }
