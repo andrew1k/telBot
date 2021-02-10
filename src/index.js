@@ -96,9 +96,10 @@ bot.on('message', msg => {
                 reply_markup: {
                     keyboard: keyboard.materialsForSG
                 }
+            }).then(() => {
+                bot.sendMessage(chatId, `🔥 Начните с книжки пастора Даниила Шатрова ‘Сила Малой Группы’.`)
+                bot.sendDocument(chatId, files.materialsForSG.danBook)
             })
-            bot.sendMessage(chatId, `🔥 Начните с книжки пастора Даниила Шатрова ‘Сила Малой Группы’.`)
-            bot.sendDocument(chatId, files.materialsForSG.danBook)
             break
 
             // Calendar =====================================================================================
@@ -287,7 +288,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/spb_alexandr_petrov1'
+                            url: 't.me/spb_alexandr_petrov1',
                         }]
                     ]
                 }
@@ -301,7 +302,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/emiliya_nikolaeva'
+                            url: 't.me/emiliya_nikolaeva',
                         }]
                     ] 
                 }
@@ -315,7 +316,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/sadf'
+                            url: kb.signUpUrl,
                         }]
                     ]
                 }
@@ -329,7 +330,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/sadf'
+                            url: kb.signUpUrl,
                         }]
                     ]
                 }
@@ -343,7 +344,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/arsentev'
+                            url: 't.me/arsentev',
                         }]
                     ]
                 }
@@ -357,7 +358,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/sadf'
+                            url: kb.signUpUrl,
                         }]
                     ]
                 }
@@ -371,7 +372,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/sadf'
+                            url: 't.me/sadf',
                         }]
                     ]
                 }
@@ -385,7 +386,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/vitalik_golikov'
+                            url: kb.signUpUrl,
                         }]
                     ]
                 }
@@ -399,7 +400,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/vitalik_golikov'
+                            url: kb.signUpUrl,
                         }]
                     ]
                 }
@@ -413,7 +414,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: 't.me/vitalik_golikov'
+                            url: kb.signUpUrl,
                         }]
                     ]
                 }
