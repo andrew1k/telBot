@@ -7,7 +7,7 @@ module.exports = {
         serv: `🙌🏻 Служения`,
         teaching: `📚 Обучение`,
         notes: `🗒 Конспекты`,
-        pray: `🙏🏻 Молитвенное`,
+        pray: `🙏🏻 Молитвенные нужды`,
         faq: `❔ Вопросы`,
         materialsForSG: `💻 Материалы для МГ`,
     },
@@ -91,6 +91,7 @@ module.exports = {
 
     // Respond inline_keyboard
     respondBtn: 'Написать',
+    respondForSG: 't.me/nesilchuk',
     respondUrl: 'https://t.me/mbvyouthadmin',
 
     // Vitalik 

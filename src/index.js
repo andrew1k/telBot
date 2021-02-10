@@ -183,7 +183,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.respondBtn,
-                            url: kb.respondUrl,
+                            url: kb.respondForSG,
                         }]
                     ]
                 }
@@ -197,7 +197,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.respondBtn,
-                            url: kb.respondUrl,
+                            url: kb.respondForSG,
                         }]
                     ]
                 }
@@ -440,15 +440,22 @@ bot.on('message', msg => {
             })
             break
         case kb.teaching.steps:
-            bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepInfo)
-            bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepOne)
-            bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepTwo)
-            bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepThree)
-            bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepFour, {
-                reply_markup: {
-                    keyboard: keyboard.teaching
-                }
+            bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepInfo).then(() => {
+                bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepOne).then(() => {
+                    bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepTwo).then(() => {
+                        bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepThree).then(() => {
+                            bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepFour, {
+                                reply_markup: {
+                                    keyboard: keyboard.teaching
+                                }
+                            })
+                        })
+                    })
+                })
             })
+            
+            
+            
             break
         case kb.teaching.bibleSchool:
             bot.sendMessage(chatId, messages.teachingObj.bibleSchool, {
@@ -518,7 +525,16 @@ bot.on('message', msg => {
         case kb.materialsForSG.msgWorship:
             bot.sendMessage(chatId, messages.materialsForSGObj.msgWorship, {
                 reply_markup: {
-                    keyboard: keyboard.materialsForSG
+                    inline_keyboard: [
+                        [{
+                            text: `Песни прославления МБВ(Караоке)`,
+                            url: 'https://www.youtube.com/playlist?list=PLjjvxd6WcKV0iJGU4PM6DR4EZ4ideQrR9'
+                        }],
+                        [{
+                            text: `Записи песен с богослужений`,
+                            url: 'https://www.youtube.com/playlist?list=PLjjvxd6WcKV0Vae-XkzPV_bOmJWB1iWU3'
+                        }]
+                    ]
                 }
             })
             break
@@ -528,6 +544,7 @@ bot.on('message', msg => {
                     keyboard: keyboard.materialsForSG
                 }
             })
+            bot.sendDocument(chatId, files.materialsForSG.danBook)
             break
         case kb.materialsForSG.msgVideo:
             bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid1, {
