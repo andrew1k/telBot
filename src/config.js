@@ -35,8 +35,6 @@ module.exports = {
     // sint laboriosam enim impedit omnis eveniet dicta nesciunt fugiat quisquam pariatur accusamus 
     // laudantium dignissimos neque necessitatibus recusandae consequatur incidunt ullam velit consectetur 
     // dolore et, dolores ipsum. Eum nostrum harum fuga perferendis aliquid.
-    
-
     // Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam impedit hic fugit vero quos facere 
     // cumque pariatur nobis? Dicta, quod. Deserunt possimus quia accusamus culpa esse quasi illum asperiores fuga
     // ut dignissimos! Quia architecto minus iure vitae nobis quas mollitia inventore, dignissimos magni vel 
@@ -73,8 +71,7 @@ module.exports = {
     // sint laboriosam enim impedit omnis eveniet dicta nesciunt fugiat quisquam pariatur accusamus 
     // laudantium dignissimos neque necessitatibus recusandae consequatur incidunt ullam velit consectetur 
     // dolore et, dolores ipsum. Eum nostrum harum fuga perferendis aliquid.
-    
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam impedit hic fugit vero quos facere 
+    // Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam impedit hic fugit vero quos facere 
     // cumque pariatur nobis? Dicta, quod. Deserunt possimus quia accusamus culpa esse quasi illum asperiores fuga
     // ut dignissimos! Quia architecto minus iure vitae nobis quas mollitia inventore, dignissimos magni vel 
     // accusantium nam quis atque suscipit, quidem nihil. Possimus eius quibusdam magnam dolore veritatis in ab 
@@ -110,8 +107,7 @@ module.exports = {
     // sint laboriosam enim impedit omnis eveniet dicta nesciunt fugiat quisquam pariatur accusamus 
     // laudantium dignissimos neque necessitatibus recusandae consequatur incidunt ullam velit consectetur 
     // dolore et, dolores ipsum. Eum nostrum harum fuga perferendis aliquid.
-    
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam impedit hic fugit vero quos facere 
+    // Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam impedit hic fugit vero quos facere 
     // cumque pariatur nobis? Dicta, quod. Deserunt possimus quia accusamus culpa esse quasi illum asperiores fuga
     // ut dignissimos! Quia architecto minus iure vitae nobis quas mollitia inventore, dignissimos magni vel 
     // accusantium nam quis atque suscipit, quidem nihil. Possimus eius quibusdam magnam dolore veritatis in ab 
@@ -147,8 +143,7 @@ module.exports = {
     // sint laboriosam enim impedit omnis eveniet dicta nesciunt fugiat quisquam pariatur accusamus 
     // laudantium dignissimos neque necessitatibus recusandae consequatur incidunt ullam velit consectetur 
     // dolore et, dolores ipsum. Eum nostrum harum fuga perferendis aliquid.
-    
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam impedit hic fugit vero quos facere 
+    // Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam impedit hic fugit vero quos facere 
     // cumque pariatur nobis? Dicta, quod. Deserunt possimus quia accusamus culpa esse quasi illum asperiores fuga
     // ut dignissimos! Quia architecto minus iure vitae nobis quas mollitia inventore, dignissimos magni vel 
     // accusantium nam quis atque suscipit, quidem nihil. Possimus eius quibusdam magnam dolore veritatis in ab 
@@ -184,8 +179,7 @@ module.exports = {
     // sint laboriosam enim impedit omnis eveniet dicta nesciunt fugiat quisquam pariatur accusamus 
     // laudantium dignissimos neque necessitatibus recusandae consequatur incidunt ullam velit consectetur 
     // dolore et, dolores ipsum. Eum nostrum harum fuga perferendis aliquid.
-    
-// Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam impedit hic fugit vero quos facere 
+    // Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam impedit hic fugit vero quos facere 
     // cumque pariatur nobis? Dicta, quod. Deserunt possimus quia accusamus culpa esse quasi illum asperiores fuga
     // ut dignissimos! Quia architecto minus iure vitae nobis quas mollitia inventore, dignissimos magni vel 
     // accusantium nam quis atque suscipit, quidem nihil. Possimus eius quibusdam magnam dolore veritatis in ab 
