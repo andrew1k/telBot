@@ -2,6 +2,7 @@ const kb = require('./keyboard-buttons')
 // Keyboard 
 module.exports = {
     home: [
+        [kb.home.temp]
         [kb.home.calendar],
         [kb.home.smallGroups, kb.home.serv],
         [kb.home.teaching, kb.home.notes],

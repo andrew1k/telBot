@@ -2,6 +2,7 @@
 module.exports = {
     homeBtn: `🌐 Главное меню`,
     home: {
+        temp: `❤️ Ток-Шоу`,
         calendar: `📆 Календарь событий`,
         smallGroups: `🏠 Малые Группы`,
         serv: `🙌🏻 Служения`,
