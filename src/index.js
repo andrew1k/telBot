@@ -63,7 +63,7 @@ bot.on('message', msg => {
                         ]
                     }
                 }).then(() => {
-                    bot.sendMessage(chatId, `Пожалуйста, не нажимаете раньше времени`, {
+                    bot.sendMessage(chatId, `Пожалуйста, не нажимайте раньше времени`, {
                         reply_markup: {
                             inline_keyboard: [
                                 [{
@@ -73,11 +73,11 @@ bot.on('message', msg => {
                             ]
                         }
                     }).then(() => {
-                        bot.sendMessage(chatId, ``, {
+                        bot.sendMessage(chatId, `Вам будет интереснее отвечать вместе со всеми`, {
                             reply_markup: {
                                 inline_keyboard: [
                                     [{
-                                        text: `Вам будет интереснее отвечать вместе со всеми`,
+                                        text: `Вопрос 4`,
                                         url: `https://forms.gle/GRGL1QvkfeBzNKyMA`
                                     }]
                                 ]
