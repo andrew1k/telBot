@@ -39,6 +39,51 @@ bot.on('message', msg => {
                     keyboard: keyboard.calendar
                 }
             })
+            // temp key
+        case kb.home.temp:
+            bot.sendMessage(chatId, `Mess 1`, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: `Вопрос 1`,
+                            url: `https://forms.gle/rGW9pKB9Xzqdm7GT8`
+                        }]
+                    ]
+                }
+            }).then(() => {
+                bot.sendMessage(chatId, `Mess 2`, {
+                    reply_markup: {
+                        inline_keyboard: [
+                            [{
+                                text: `Вопрос 2`,
+                                url: `https://forms.gle/8Whtgw8rbgGY1f236`
+                            }]
+                        ]
+                    }
+                }).then(() => {
+                    bot.sendMessage(chatId, `Mess 3`, {
+                        reply_markup: {
+                            inline_keyboard: [
+                                [{
+                                    text: `Вопрос 3`,
+                                    url: `https://forms.gle/dnZF2D74Ce2NogQJA`
+                                }]
+                            ]
+                        }
+                    }).then(() => {
+                        bot.sendMessage(chatId, `Mess 4`, {
+                            reply_markup: {
+                                inline_keyboard: [
+                                    [{
+                                        text: `Вопрос 4`,
+                                        url: `https://forms.gle/GRGL1QvkfeBzNKyMA`
+                                    }]
+                                ]
+                            }
+                        })
+                    })
+                }) 
+            })
             break
         case kb.home.smallGroups:
             bot.sendMessage(chatId, messages.smallGroups, {
@@ -461,7 +506,12 @@ bot.on('message', msg => {
         case kb.teaching.bibleSchool:
             bot.sendMessage(chatId, messages.teachingObj.bibleSchool, {
                 reply_markup: {
-                    keyboard: keyboard.teaching
+                    inline_keyboard: [
+                        [{
+                            text: 'Библейская школа',
+                            url: 'https://youtube.com/playlist?list=PLjjvxd6WcKV2oN8Gv8aIvdZ657hLS_KNR'
+                        }]
+                    ]
                 }
             })
             break
@@ -519,7 +569,12 @@ bot.on('message', msg => {
         case kb.materialsForSG.msgNotes:
             bot.sendMessage(chatId, messages.materialsForSGObj.msgNotes, {
                 reply_markup: {
-                    keyboard: keyboard.materialsForSG
+                    inline_keyboard: [
+                        [{
+                            text: 'Посмотреть проповедь',
+                            url: 'https://www.youtube.com/watch?v=GKMrWLKYXPQ'
+                        }]
+                    ]
                 }
             })
             break
