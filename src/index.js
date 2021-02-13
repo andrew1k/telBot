@@ -41,7 +41,9 @@ bot.on('message', msg => {
             })
             // temp key
         case kb.home.temp:
-            bot.sendMessage(chatId, `Mess 1`, {
+            bot.sendMessage(chatId, `Привет! Вы попали на ток-шоу о любви. 
+Нам важно узнать ваше честное мнение об отношениях. Голосование абсолютно анонимно.
+Ведущий сообщит, когда открывать каждый вопрос. Пожалуйста, не нажимайте на ссылки раньше времени, вам будет интереснее отвечать на вопросы вместе со всеми`, {
                 reply_markup: {
                     inline_keyboard: [
                         [{
@@ -51,7 +53,7 @@ bot.on('message', msg => {
                     ]
                 }
             }).then(() => {
-                bot.sendMessage(chatId, `Mess 2`, {
+                bot.sendMessage(chatId, `Ведущий сообщит, когда открыть этот вопрос`, {
                     reply_markup: {
                         inline_keyboard: [
                             [{
@@ -61,7 +63,7 @@ bot.on('message', msg => {
                         ]
                     }
                 }).then(() => {
-                    bot.sendMessage(chatId, `Mess 3`, {
+                    bot.sendMessage(chatId, `Пожалуйста, не нажимаете раньше времени`, {
                         reply_markup: {
                             inline_keyboard: [
                                 [{
@@ -71,11 +73,11 @@ bot.on('message', msg => {
                             ]
                         }
                     }).then(() => {
-                        bot.sendMessage(chatId, `Mess 4`, {
+                        bot.sendMessage(chatId, ``, {
                             reply_markup: {
                                 inline_keyboard: [
                                     [{
-                                        text: `Вопрос 4`,
+                                        text: `Вам будет интереснее отвечать вместе со всеми`,
                                         url: `https://forms.gle/GRGL1QvkfeBzNKyMA`
                                     }]
                                 ]
