@@ -44,53 +44,6 @@ bot.on('message', msg => {
                     keyboard: keyboard.calendar
                 }
             })
-            // temp key
-        case kb.home.temp:
-            bot.sendMessage(chatId, `Привет! Вы попали на ток-шоу о любви. 
-Нам важно узнать ваше честное мнение об отношениях. Голосование абсолютно анонимно.
-Ведущий сообщит, когда открывать каждый вопрос. Пожалуйста, не нажимайте на ссылки раньше времени, вам будет интереснее отвечать на вопросы вместе со всеми`, {
-                reply_markup: {
-                    inline_keyboard: [
-                        [{
-                            text: `Вопрос 1`,
-                            url: `https://forms.gle/rGW9pKB9Xzqdm7GT8`
-                        }]
-                    ]
-                }
-            }).then(() => {
-                bot.sendMessage(chatId, `Ведущий сообщит, когда открыть этот вопрос`, {
-                    reply_markup: {
-                        inline_keyboard: [
-                            [{
-                                text: `Вопрос 2`,
-                                url: `https://forms.gle/8Whtgw8rbgGY1f236`
-                            }]
-                        ]
-                    }
-                }).then(() => {
-                    bot.sendMessage(chatId, `Пожалуйста, не нажимайте раньше времени`, {
-                        reply_markup: {
-                            inline_keyboard: [
-                                [{
-                                    text: `Вопрос 3`,
-                                    url: `https://forms.gle/dnZF2D74Ce2NogQJA`
-                                }]
-                            ]
-                        }
-                    }).then(() => {
-                        bot.sendMessage(chatId, `Вам будет интереснее отвечать вместе со всеми`, {
-                            reply_markup: {
-                                inline_keyboard: [
-                                    [{
-                                        text: `Вопрос 4`,
-                                        url: `https://forms.gle/GRGL1QvkfeBzNKyMA`
-                                    }]
-                                ]
-                            }
-                        })
-                    })
-                }) 
-            })
             break
         case kb.home.smallGroups:
             bot.sendMessage(chatId, messages.smallGroups, {
