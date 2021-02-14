@@ -25,6 +25,11 @@ bot.onText(/\/start/, msg => {
             keyboard: keyboard.home
         }
     })
+    console.log(helper.debug(`From start 
+ chatID: ${chatId},
+ userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
+ date: ${msg.date},
+ text: ${msg.text}`));
 })
 
 // Action Listner 
