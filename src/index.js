@@ -640,6 +640,6 @@ bot.on('message', msg => {
                     keyboard: keyboard.home
                 }
             })
-            console.log(helper.debug(msg));
+            // console.log(helper.debug(msg));
     }
 })

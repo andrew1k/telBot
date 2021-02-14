@@ -1,1 +1,1 @@
-worker: node ./src/index.js > logs.txt
+worker: node ./src/index.js
