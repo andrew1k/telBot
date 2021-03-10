@@ -236,6 +236,6 @@ https://mbv.spb.ru/biblejskaya-shkola/`,
             vid3: `https://youtube.com/playlist?list=PLjjvxd6WcKV35dQZvqV3KOQYR2P3Z6ozd`,
             vid4: `https://youtube.com/playlist?list=PLjjvxd6WcKV3LUl5tB26CAv7SGb715AP5`,
         },
-        msgMeetings: 'Следующая встреча молодежных ведущих пройдет 3 марта в 19:00', //this.calendarObj.smallGroupsLeaderMeeting
+        msgMeetings: 'Следующая встреча молодежных ведущих пройдет 19 апреля в 19:00 в малом зале', //this.calendarObj.smallGroupsLeaderMeeting
     }
 }
