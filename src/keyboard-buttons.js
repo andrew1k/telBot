@@ -74,20 +74,20 @@ module.exports = {
     apple: 'Apple',
     google: 'Google',
     // First Item
-    appleItemFirst: 'https://calndr.link/e/zugSJAhom2?s=apple',
-    googleItemFirst: 'https://calndr.link/e/zugSJAhom2?s=google',
+    appleItemFirst: 'https://calndr.link/e/fl9oV5FvZ2'+'?s=apple',
+    googleItemFirst: 'https://calndr.link/e/fl9oV5FvZ2'+'?s=google',
     // Second Item
-    appleItemSecond: 'https://calndr.link/e/G4ndn8F16R?s=apple',
-    googleItemSecond: 'https://calndr.link/e/G4ndn8F16R?s=google',
+    appleItemSecond: 'https://calndr.link/e/FiPDDjThaW'+'?s=apple',
+    googleItemSecond: 'https://calndr.link/e/FiPDDjThaW'+'?s=google',
     // Third Item
-    appleItemThird: 'https://calndr.link/e/sQhGjGFwtF?s=apple',
-    googleItemThird: 'https://calndr.link/e/sQhGjGFwtF?s=google',
+    appleItemThird: 'https://calndr.link/e/zW4kncgIo2'+'?s=apple',
+    googleItemThird: 'https://calndr.link/e/zW4kncgIo2'+'?s=google',
     // Fourth Item
-    appleItemFourth: '',
-    googleItemFourth: '',
+    appleItemFourth: ''+'?s=apple',
+    googleItemFourth: ''+'?s=google',
     // Fifth Item
-    appleItemFifth: '',
-    googleItemFifth: '',
+    appleItemFifth: ''+'?s=apple',
+    googleItemFifth: ''+'?s=google',
 
     // Respond inline_keyboard
     respondBtn: 'Написать',
