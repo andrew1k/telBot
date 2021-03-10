@@ -14,7 +14,7 @@ module.exports = {
     calendar: {
         game: `🎲 Вечер настольных игр`,
         pray: `🙏🏻 Молодежная молитва`,
-        turnout: `🏘 Молодежный выезд`,
+        turnout: `🤸‍🤸‍♂️ Батуты`,
         teaWithPastor: '☕️ Чай с Пастором',
         goHome: `🌐 Главное меню`,
     },
