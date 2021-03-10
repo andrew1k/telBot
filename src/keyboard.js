@@ -13,6 +13,7 @@ module.exports = {
         [kb.calendar.pray],
         [kb.calendar.turnout],
         [kb.calendar.teaWithPastor],
+        [kb.calendar.stepsInSundays],
         [kb.calendar.goHome],
     ],
     smallGroups: [

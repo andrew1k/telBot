@@ -48,6 +48,10 @@ module.exports = {
 
     
 Добавить в календарь ⬇️`,
+
+        stepsInSundays: `Супер-воскресенье
+Шаги 1, 2, 3, 4 
+28 марта, 17:00-21:00, КЗ «Колизей»`,
         smallGroupsLeaderMeeting:  `Meeting`,
         teaWithPastor: `Эта встреча для тех, кто недавно в церкви, дома у пастора Даниила Шатрова, чтобы в домашней обстановке, за чашечкой чая познакомиться ближе с пастором и его семьей, пообщаться друг с другом и хорошо провести время вместе.
 Встреча проходит раз в несколько месяцев, в воскресный день после молодежного богослужения.
@@ -236,6 +240,6 @@ https://mbv.spb.ru/biblejskaya-shkola/`,
             vid3: `https://youtube.com/playlist?list=PLjjvxd6WcKV35dQZvqV3KOQYR2P3Z6ozd`,
             vid4: `https://youtube.com/playlist?list=PLjjvxd6WcKV3LUl5tB26CAv7SGb715AP5`,
         },
-        msgMeetings: 'Следующая встреча молодежных ведущих пройдет 19 апреля в 19:00 в малом зале', //this.calendarObj.smallGroupsLeaderMeeting
+        msgMeetings: 'Следующая встреча молодежных ведущих пройдет 12 апреля в 19:00 в малом зале', //this.calendarObj.smallGroupsLeaderMeeting
     }
 }

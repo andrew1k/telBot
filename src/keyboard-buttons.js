@@ -16,6 +16,7 @@ module.exports = {
         pray: `🙏🏻 Молодежная молитва`,
         turnout: `🤸‍🤸‍♂️ Батуты`,
         teaWithPastor: '☕️ Чай с Пастором',
+        stepsInSundays: `👣 ШАГИ`,
         goHome: `🌐 Главное меню`,
     },
     smallGroups: {
@@ -83,8 +84,8 @@ module.exports = {
     appleItemThird: 'https://calndr.link/e/zW4kncgIo2'+'?s=apple',
     googleItemThird: 'https://calndr.link/e/zW4kncgIo2'+'?s=google',
     // Fourth Item
-    appleItemFourth: ''+'?s=apple',
-    googleItemFourth: ''+'?s=google',
+    appleItemFourth: 'https://calndr.link/e/fbTJHAEKnp'+'?s=apple',
+    googleItemFourth: 'https://calndr.link/e/fbTJHAEKnp'+'?s=google',
     // Fifth Item
     appleItemFifth: ''+'?s=apple',
     googleItemFifth: ''+'?s=google',

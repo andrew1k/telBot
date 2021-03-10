@@ -179,6 +179,24 @@ bot.on('message', msg => {
                 })
             break
 
+            // ==================== ☕️ Sunday Steps =================================
+        case kb.calendar.stepsInSundays:
+            bot.sendPhoto(chatId, files.calendarPic5, {
+                caption: messages.calendarObj.stepsInSundays,
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.apple,
+                            url: kb.appleItemFourth,
+                        }, {
+                            text: kb.google,
+                            url: kb.googleItemFourth
+                        }]
+                    ]
+                }
+                })
+            break
+
             // Go Home
         case kb.calendar.goHome:
             bot.sendMessage(chatId, kb.homeBtn, {
