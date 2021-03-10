@@ -73,13 +73,13 @@ module.exports = {
     // Calendar inline_keyboard
     apple: 'Apple',
     google: 'Google',
-    // First Item
+    // First Item ============================ 🎲 ВЕЧЕР НАСТОЛЬНЫХ ИГР =============================
     appleItemFirst: 'https://calndr.link/e/fl9oV5FvZ2'+'?s=apple',
     googleItemFirst: 'https://calndr.link/e/fl9oV5FvZ2'+'?s=google',
-    // Second Item
+    // Second Item =========================== 🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА ===============================
     appleItemSecond: 'https://calndr.link/e/FiPDDjThaW'+'?s=apple',
     googleItemSecond: 'https://calndr.link/e/FiPDDjThaW'+'?s=google',
-    // Third Item
+    // Third Item ============================ 🤸‍🤸‍♂️ Батуты =========================================
     appleItemThird: 'https://calndr.link/e/zW4kncgIo2'+'?s=apple',
     googleItemThird: 'https://calndr.link/e/zW4kncgIo2'+'?s=google',
     // Fourth Item
