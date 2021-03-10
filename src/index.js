@@ -108,8 +108,9 @@ bot.on('message', msg => {
             })
             break
 
-            // Calendar =====================================================================================
-            // Item 1
+            // ========================================================= CALENDAR ====================================================================
+            
+            // Item 1 ========== 🎲 ВЕЧЕР НАСТОЛЬНЫХ ИГР =============================
         case kb.calendar.game:
             bot.sendPhoto(chatId, files.calendarPic1, {
                 caption: messages.calendarObj.game,
@@ -127,7 +128,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Item 2
+            // Item 2 ========== 🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА ==============================
         case kb.calendar.pray:
             bot.sendPhoto(chatId, files.calendarPic2, {
                 caption: messages.calendarObj.pray,
@@ -145,20 +146,25 @@ bot.on('message', msg => {
             })
             break
 
-            // Item 3
+            // Item 3 ========== 🤸‍🤸‍♂️ Батуты =========================================
         case kb.calendar.turnout:
             bot.sendPhoto(chatId, files.calendarPic3, {
                 caption: messages.calendarObj.turnout,
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.signUpBtn,
-                            url: kb.signUpUrl,
+                            text: kb.apple,
+                            url: kb.appleItemThird
+                        }, {
+                            text: kb.google,
+                            url: kb.googleItemThird
                         }
                     ]]
                 }
             })
             break
+
+            // ==================== ☕️ Чай с Пастором =================================
         case kb.calendar.teaWithPastor:
             bot.sendPhoto(chatId, files.calendarPic4, {
                 caption: messages.calendarObj.teaWithPastor,
@@ -231,7 +237,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Serv =========================================================================
+            // ========================================================== Serv =========================================================================
 
             // ServAll
         case kb.serv.servAll:
@@ -285,7 +291,7 @@ bot.on('message', msg => {
             })
             break
 
-            // ServAll ========================================================================
+            // ============================================================ ServAll ========================================================================
 
             // My Generation
         case kb.servAll.servMyGeneration:
@@ -436,7 +442,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Teaching ==============================================================================
+            // ======================================================= Teaching ==============================================================================
 
         case kb.teaching.onePlusOne:
             bot.sendMessage(chatId, messages.teachingObj.onePlusOne, {
@@ -516,7 +522,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Materials For Small Groups ==============================================================================
+            //=========================================================== Materials For Small Groups ==============================================================================
         case kb.materialsForSG.msgHelp:
             bot.sendMessage(chatId, messages.materialsForSGObj.msgHelp, {
                 reply_markup: {
