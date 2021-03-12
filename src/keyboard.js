@@ -4,7 +4,7 @@ module.exports = {
     home: [
         [kb.home.calendar],
         [kb.home.smallGroups, kb.home.serv],
-        [kb.home.teaching, kb.home.notes],
+        [kb.home.learnMore, kb.home.mainSteps],
         [kb.home.pray, kb.home.faq],
         [kb.home.materialsForSG]
     ],
@@ -36,11 +36,12 @@ module.exports = {
         [kb.servAll.servMeeting, kb.servAll.servSocialWeb],
         [kb.servAll.backToServ] 
     ],
-    teaching: [
-        [kb.teaching.onePlusOne],
-        [kb.teaching.steps],
-        [kb.teaching.bibleSchool],
-        [kb.teaching.goHome],
+    learnMore: [
+        [kb.learnMore.aboutChurch],
+        [kb.learnMore.spiritUp],
+        [kb.learnMore.sozo],
+        [kb.learnMore.familyServ],
+        [kb.homeBtn]
     ],
     onePlusOne: [
         [kb.onePlusOne.findMentor],
