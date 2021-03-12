@@ -5,8 +5,8 @@ module.exports = {
         calendar: `📆 Календарь событий`,
         smallGroups: `🏠 Малые Группы`,
         serv: `🙌🏻 Служения`,
-        teaching: `📚 Обучение`,
-        notes: `🗒 Конспекты`,
+        learnMore: `📚 Узнать больше`,
+        mainSteps: `👣 ШАГИ`,
         pray: `🙏🏻 Молитвенные нужды`,
         faq: `❔ Вопросы`,
         materialsForSG: `💻 Материалы для МГ`,
@@ -44,11 +44,11 @@ module.exports = {
         servSocialWeb: `📱 Соц. сети`,
         backToServ: `Назад к '🙌🏻 Служения'`,
     },
-    teaching: {
-        onePlusOne: `1 + 1`,
-        steps: `🏃🏻‍♂️ Шаги`,
-        bibleSchool: `🎓 Библейская Школа`,
-        goHome: `🌐 Главное меню`,
+    learnMore: {
+        aboutChurch: '✝️ О Церкви',
+        spiritUp: '🆙 Духовный рост',
+        sozo: '🆗 Душепопечение',
+        familyServ: '✅ Семейное служение',
     }, 
     onePlusOne: {
         findMentor: `🔎 Хочу найти наставника`,
@@ -94,6 +94,8 @@ module.exports = {
     respondBtn: 'Написать',
     respondForSG: 't.me/nesilchuk',
     respondUrl: 'https://t.me/mbvyouthadmin',
+
+    messToKarina: 't.me/karina_dmitrienko',
 
     // Vitalik 
     signUpBtn: 'Записаться',
