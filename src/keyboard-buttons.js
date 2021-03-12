@@ -93,7 +93,7 @@ module.exports = {
     // Respond inline_keyboard
     respondBtn: 'Написать',
     respondForSG: 't.me/nesilchuk',
-    respondUrl: 'https://t.me/mbvyouthadmin',
+    respondUrl: 'https://t.me/mbvadmin',
 
     messToKarina: 't.me/karina_dmitrienko',
 
