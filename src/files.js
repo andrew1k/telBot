@@ -10,6 +10,9 @@ module.exports = {
     // Steps
     calendarPic5: 'https://mbv.spb.ru/wp-content/uploads/2016/08/cover-book2-1024x853-1.jpg',
 
+    // About Church
+    aboutChurch: 'https://sun9-45.userapi.com/impf/NGL4Y9rLUa0vlFdXXG5rp1YvB2Y8KcXNoBZRIA/1KJqRfX2NZU.jpg?size=1131x1600&quality=96&sign=41e077f28a3cbdbe241b34570daaf17b&type=album',
+
     mapUrl: 'https://yandex.ru/maps/?um=constructor%3A35dad1dc46caf371e7d494ce0a91041adc121c5fde390dd1c7217bd6faee2a13&source=constructorLink',
 
     // materials for small groups
