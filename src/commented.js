@@ -52,3 +52,36 @@
 // }
 
 
+            // // OnePlusOne
+            // case kb.onePlusOne.findMentor:
+            //     bot.sendMessage(chatId, messages.teachingObj.onePlusOneObj.onePlusOneStudent, {
+            //         reply_markup: {
+            //             inline_keyboard: [
+            //                 [{
+            //                     text: kb.respondBtn,
+            //                     url: kb.respondUrl,
+            //                 }]
+            //             ]
+            //         }
+            //     })
+            //     break
+            // case kb.onePlusOne.becomeMentor:
+            //     bot.sendMessage(chatId, messages.teachingObj.onePlusOneObj.onePlusOneMentor, {
+            //         reply_markup: {
+            //             inline_keyboard: [
+            //                 [{
+            //                     text: kb.respondBtn,
+            //                     url: kb.respondUrl,
+            //                 }]
+            //             ]
+            //         }
+            //     })
+            //     break
+            // case kb.onePlusOne.backToTeaching:
+            //     bot.sendMessage(chatId, messages.teaching, {
+            //         reply_markup: {
+            //             keyboard: keyboard.teaching
+            //         }
+            //     })
+            //     break
+    
