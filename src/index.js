@@ -14,6 +14,8 @@ const {
     kStringMaxLength
 } = require('buffer')
 const { createBrotliCompress } = require('zlib')
+const { learnMore } = require('./keyboard-buttons')
+const { url } = require('inspector')
 
 //helper.logStart()
 
@@ -59,18 +61,31 @@ bot.on('message', msg => {
                 }
             })
             break
-        case kb.home.teaching:
-            bot.sendMessage(chatId, messages.teaching, {
+        case kb.home.learnMore:
+            bot.sendMessage(chatId, messages.learnMore, {
                 reply_markup: {
-                    keyboard: keyboard.teaching
+                    keyboard: keyboard.learnMore
                 }
             })
             break
-        case kb.home.notes:
-            bot.sendMessage(chatId, messages.notes, {
-                reply_markup: {
-                    keyboard: keyboard.home
-                }
+        case kb.home.mainSteps:
+            bot.sendMessage(chatId, messages.stepsObj.stepOne).then(() => {
+                bot.sendMessage(chatId, messages.stepsObj.stepTwo).then(() => {
+                    bot.sendMessage(chatId, messages.stepsObj.stepThree).then(() => {
+                        bot.sendMessage(chatId, messages.stepsObj.stepFour).then(() => {
+                            bot.sendMessage(chatId, messages.stepsObj.stepInfo, {
+                                reply_markup: {
+                                    inline_keyboard: [
+                                        [{
+                                            text: `${kb.signUpBtn} на ШАГ`,
+                                            url: kb.messToKarina
+                                        }]
+                                    ]
+                                }
+                            })
+                        })
+                    })
+                })
             })
             break
         case kb.home.pray:
@@ -346,7 +361,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: kb.signUpUrl,
+                            url: 't.me/lilko_22',
                         }]
                     ]
                 }
@@ -360,7 +375,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: kb.signUpUrl,
+                            url: 't.me/Nastena_Pecherskikh',
                         }]
                     ]
                 }
@@ -460,86 +475,76 @@ bot.on('message', msg => {
             })
             break
 
-            // ======================================================= Teaching ==============================================================================
+            // ======================================================= LearnMore ==============================================================================
 
-        case kb.teaching.onePlusOne:
-            bot.sendMessage(chatId, messages.teachingObj.onePlusOne, {
+        case kb.learnMore.aboutChurch:
+            bot.sendPhoto(chatId, files.aboutChurch, {
+                caption: messages.learnMoreObj.aboutChurchCaption,
                 reply_markup: {
-                    keyboard: keyboard.onePlusOne
+                    inline_keyboard: [
+                        [{
+                            text: 'Сайт церкви',
+                            url: 'https://mbv.spb.ru/'
+                        }],
+                        [{
+                            text: 'Instagram церкви',
+                            url: 'https://instagram.com/mbvspb?igshid=1l0bt30zrlxy6'
+                        }],
+                        [{
+                            text: 'Instagram пастора Даниила',
+                            url: 'https://instagram.com/pastor_shatrov?igshid=13jayautjq3ky',
+                        }]
+                    ]
                 }
             })
             break
-        case kb.teaching.steps:
-            bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepInfo).then(() => {
-                bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepOne).then(() => {
-                    bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepTwo).then(() => {
-                        bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepThree).then(() => {
-                            bot.sendMessage(chatId, messages.teachingObj.stepsObj.stepFour, {
-                                reply_markup: {
-                                    keyboard: keyboard.teaching
-                                }
-                            })
-                        })
-                    })
+        case kb.learnMore.spiritUp:
+            bot.sendMessage(chatId, messages.learnMoreObj.spiritUp, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.signUpBtn,
+                            url: kb.respondForSG
+                        }]
+                    ]
+                }
+            }).then(()=>{
+                bot.sendMessage(chatId, messages.learnMoreObj.bibleSchool, {
+                    reply_markup: {
+                        inline_keyboard: [
+                            [{
+                                text: 'Библейская школа',
+                                url: 'https://youtube.com/playlist?list=PLjjvxd6WcKV2oN8Gv8aIvdZ657hLS_KNR' 
+                            }]
+                        ]
+                    }
                 })
             })
-            
-            
-            
             break
-        case kb.teaching.bibleSchool:
-            bot.sendMessage(chatId, messages.teachingObj.bibleSchool, {
+        case kb.learnMore.sozo:
+            bot.sendMessage(chatId, messages.learnMoreObj.sozo, {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: 'Библейская школа',
-                            url: 'https://youtube.com/playlist?list=PLjjvxd6WcKV2oN8Gv8aIvdZ657hLS_KNR'
+                            text: kb.signUpBtn,
+                            url: kb.messToKarina
                         }]
                     ]
                 }
             })
             break
-        case kb.teaching.goHome:
-            bot.sendMessage(chatId, kb.homeBtn, {
-                reply_markup: {
-                    keyboard: keyboard.home
-                }
-            })
-            break
-
-            // OnePlusOne
-        case kb.onePlusOne.findMentor:
-            bot.sendMessage(chatId, messages.teachingObj.onePlusOneObj.onePlusOneStudent, {
+        case kb.learnMore.familyServ:
+            bot.sendMessage(chatId, messages.learnMoreObj.familyServ, {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.respondBtn,
-                            url: kb.respondUrl,
+                            text: kb.signUpBtn,
+                            url: kb.messToKarina
                         }]
                     ]
                 }
             })
             break
-        case kb.onePlusOne.becomeMentor:
-            bot.sendMessage(chatId, messages.teachingObj.onePlusOneObj.onePlusOneMentor, {
-                reply_markup: {
-                    inline_keyboard: [
-                        [{
-                            text: kb.respondBtn,
-                            url: kb.respondUrl,
-                        }]
-                    ]
-                }
-            })
-            break
-        case kb.onePlusOne.backToTeaching:
-            bot.sendMessage(chatId, messages.teaching, {
-                reply_markup: {
-                    keyboard: keyboard.teaching
-                }
-            })
-            break
-
             //=========================================================== Materials For Small Groups ==============================================================================
         case kb.materialsForSG.msgHelp:
             bot.sendMessage(chatId, messages.materialsForSGObj.msgHelp, {
