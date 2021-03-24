@@ -561,7 +561,9 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: 'Посмотреть проповедь',
-                            url: 'https://www.youtube.com/watch?v=fzdA7gJBCh4'
+                            // ======================= Weekly updates =======================
+                            url: 'https://www.youtube.com/watch?v=72K2jWK_fBc'
+                            // ==============================================================
                         }]
                     ]
                 }
