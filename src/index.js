@@ -13,9 +13,15 @@ const fs = require('fs')
 const {
     kStringMaxLength
 } = require('buffer')
-const { createBrotliCompress } = require('zlib')
-const { learnMore } = require('./keyboard-buttons')
-const { url } = require('inspector')
+const {
+    createBrotliCompress
+} = require('zlib')
+const {
+    learnMore
+} = require('./keyboard-buttons')
+const {
+    url
+} = require('inspector')
 
 //helper.logStart()
 
@@ -124,7 +130,7 @@ bot.on('message', msg => {
             break
 
             // ========================================================= CALENDAR ====================================================================
-            
+
             // Item 1 ========== 🎲 ВЕЧЕР НАСТОЛЬНЫХ ИГР =============================
         case kb.calendar.game:
             bot.sendPhoto(chatId, files.calendarPic1, {
@@ -161,20 +167,17 @@ bot.on('message', msg => {
             })
             break
 
-            // Item 3 ========== 🤸‍🤸‍♂️ Батуты =========================================
+            // Item 3 ========== Боулинг =========================================
         case kb.calendar.turnout:
             bot.sendPhoto(chatId, files.calendarPic3, {
                 caption: messages.calendarObj.turnout,
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.apple,
-                            url: kb.appleItemThird
-                        }, {
-                            text: kb.google,
-                            url: kb.googleItemThird
-                        }
-                    ]]
+                            text: kb.signUpBtn,
+                            url: kb.signUpUrl
+                        }]
+                    ]
                 }
             })
             break
@@ -191,12 +194,12 @@ bot.on('message', msg => {
                         }]
                     ]
                 }
-                })
+            })
             break
 
-            // ==================== ☕️ Sunday Steps =================================
+            // ==================== ☕️ Tok Show =================================
         case kb.calendar.stepsInSundays:
-            bot.sendPhoto(chatId, files.calendarPic5, {
+            bot.sendPhoto(chatId, files.calendarPicForTokShow, {
                 caption: messages.calendarObj.stepsInSundays,
                 reply_markup: {
                     inline_keyboard: [
@@ -209,7 +212,24 @@ bot.on('message', msg => {
                         }]
                     ]
                 }
-                })
+            })
+            break
+            // ===================== DomashkaParty ===================================
+        case kb.calendar.stepsInSundays:
+            bot.sendPhoto(chatId, files.calendarPicDomashkaParty, {
+                caption: messages.calendarObj.domashkaParty,
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.apple,
+                            url: kb.appleItemThird,
+                        }, {
+                            text: kb.google,
+                            url: kb.googleItemThird
+                        }]
+                    ]
+                }
+            })
             break
 
             // Go Home
@@ -291,14 +311,14 @@ bot.on('message', msg => {
                         }]
                     ]
                 }
-            }).then(() => { 
+            }).then(() => {
                 bot.sendMessage(chatId, messages.servHireSecondText)
                     .then(() => {
                         bot.sendMessage(chatId, `🔹 Графического дизайнера`)
                         bot.sendMessage(chatId, `🔹 Копирайтера (написание текстов)`)
                         bot.sendMessage(chatId, `🔹 Контент-мейкера`)
                     })
-                })
+            })
             break
 
             // Serv Unknown
@@ -349,7 +369,7 @@ bot.on('message', msg => {
                             text: kb.writeLeader,
                             url: 't.me/emiliya_nikolaeva',
                         }]
-                    ] 
+                    ]
                 }
             })
             break
@@ -508,13 +528,13 @@ bot.on('message', msg => {
                         }]
                     ]
                 }
-            }).then(()=>{
+            }).then(() => {
                 bot.sendMessage(chatId, messages.learnMoreObj.bibleSchool, {
                     reply_markup: {
                         inline_keyboard: [
                             [{
                                 text: 'Библейская школа',
-                                url: 'https://youtube.com/playlist?list=PLjjvxd6WcKV2oN8Gv8aIvdZ657hLS_KNR' 
+                                url: 'https://youtube.com/playlist?list=PLjjvxd6WcKV2oN8Gv8aIvdZ657hLS_KNR'
                             }]
                         ]
                     }
@@ -599,9 +619,9 @@ bot.on('message', msg => {
                     keyboard: keyboard.materialsForSG
                 }
             }).then(() => {
-            bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid2)
-            bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid3)
-            bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid4)
+                bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid2)
+                bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid3)
+                bot.sendMessage(chatId, messages.materialsForSGObj.msgVideo.vid4)
             })
             break
         case kb.materialsForSG.msgMeetings:
@@ -624,6 +644,6 @@ bot.on('message', msg => {
                     keyboard: keyboard.home
                 }
             })
-            console.log( JSON.stringify( helper.debug(msg) ));
+            console.log(JSON.stringify(helper.debug(msg)));
     }
 })
