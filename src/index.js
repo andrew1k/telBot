@@ -198,7 +198,7 @@ bot.on('message', msg => {
             break
 
             // ==================== ☕️ Tok Show =================================
-        case kb.calendar.stepsInSundays:
+        case kb.calendar.tokshow:
             bot.sendPhoto(chatId, files.calendarPicForTokShow, {
                 caption: messages.calendarObj.stepsInSundays,
                 reply_markup: {
@@ -215,7 +215,7 @@ bot.on('message', msg => {
             })
             break
             // ===================== DomashkaParty ===================================
-        case kb.calendar.stepsInSundays:
+        case kb.calendar.domashkaParty:
             bot.sendPhoto(chatId, files.calendarPicDomashkaParty, {
                 caption: messages.calendarObj.domashkaParty,
                 reply_markup: {
