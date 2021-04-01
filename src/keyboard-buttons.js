@@ -14,9 +14,11 @@ module.exports = {
     calendar: {
         game: `🎲 Вечер настольных игр`,
         pray: `🙏🏻 Молодежная молитва`,
-        turnout: `🤸‍🤸‍♂️ Батуты`,
+        turnout: `🏆 Боулинг`,
         teaWithPastor: '☕️ Чай с Пастором',
+        tokshow: '🎤 ТОК-ШОУ',
         stepsInSundays: `👣 ШАГИ`,
+        domashkaParty: '🏄 Домашка-Party',
         goHome: `🌐 Главное меню`,
     },
     smallGroups: {
@@ -75,17 +77,17 @@ module.exports = {
     apple: 'Apple',
     google: 'Google',
     // First Item ============================ 🎲 ВЕЧЕР НАСТОЛЬНЫХ ИГР =============================
-    appleItemFirst: 'https://calndr.link/e/fl9oV5FvZ2'+'?s=apple',
-    googleItemFirst: 'https://calndr.link/e/fl9oV5FvZ2'+'?s=google',
+    appleItemFirst: 'https://calndr.link/e/DDgvtGdaKH'+'?s=apple',
+    googleItemFirst: 'https://calndr.link/e/DDgvtGdaKH'+'?s=google',
     // Second Item =========================== 🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА ===============================
-    appleItemSecond: 'https://calndr.link/e/FiPDDjThaW'+'?s=apple',
-    googleItemSecond: 'https://calndr.link/e/FiPDDjThaW'+'?s=google',
-    // Third Item ============================ 🤸‍🤸‍♂️ Батуты =========================================
-    appleItemThird: 'https://calndr.link/e/zW4kncgIo2'+'?s=apple',
-    googleItemThird: 'https://calndr.link/e/zW4kncgIo2'+'?s=google',
-    // Fourth Item
-    appleItemFourth: 'https://calndr.link/e/fbTJHAEKnp'+'?s=apple',
-    googleItemFourth: 'https://calndr.link/e/fbTJHAEKnp'+'?s=google',
+    appleItemSecond: 'https://calndr.link/e/N0LXaPrTun'+'?s=apple',
+    googleItemSecond: 'https://calndr.link/e/N0LXaPrTun'+'?s=google',
+    // Third Item ============================ ДомашкаПати =========================================
+    appleItemThird: 'https://calndr.link/e/HQLXeygcTM'+'?s=apple',
+    googleItemThird: 'https://calndr.link/e/HQLXeygcTM'+'?s=google',
+    // Fourth Item =========================== ТОК-ШОУ =============================================
+    appleItemFourth: 'https://calndr.link/e/9xmZkdOjHo'+'?s=apple',
+    googleItemFourth: 'https://calndr.link/e/9xmZkdOjHo'+'?s=google',
     // Fifth Item
     appleItemFifth: ''+'?s=apple',
     googleItemFifth: ''+'?s=google',

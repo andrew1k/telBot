@@ -11,9 +11,11 @@ module.exports = {
     calendar: [
         [kb.calendar.game],
         [kb.calendar.pray],
+        [kb.calendar.tokshow],
         [kb.calendar.turnout],
+        [kb.calendar.domashkaParty],
         [kb.calendar.teaWithPastor],
-        [kb.calendar.stepsInSundays],
+        // [kb.calendar.stepsInSundays],
         [kb.calendar.goHome],
     ],
     smallGroups: [
