@@ -582,7 +582,7 @@ bot.on('message', msg => {
                         [{
                             text: 'Посмотреть проповедь',
                             // ======================= Weekly updates =======================
-                            url: 'https://www.youtube.com/watch?v=iW90iG9eMcE'
+                            url: 'https://www.youtube.com/watch?v=qQgM-6hf4xg'
                             // ==============================================================
                         }]
                     ]
