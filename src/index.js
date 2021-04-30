@@ -1,4 +1,5 @@
 const TelegramBot = require('node-telegram-bot-api')
+const msgNotes = require('./notes')
 const config = require('./config')
 const helper = require('./helper')
 const bot = new TelegramBot(config.token, {
@@ -576,13 +577,13 @@ bot.on('message', msg => {
             bot.sendDocument(chatId, files.materialsForSG.msgHelp.doc2)
             break
         case kb.materialsForSG.msgNotes:
-            bot.sendMessage(chatId, messages.materialsForSGObj.msgNotes, {
+            bot.sendMessage(chatId, msgNotes.text, {
                 reply_markup: {
                     inline_keyboard: [
                         [{
                             text: 'Посмотреть проповедь',
                             // ======================= Weekly updates =======================
-                            url: 'https://www.youtube.com/watch?v=qQgM-6hf4xg'
+                            url: msgNotes.url
                             // ==============================================================
                         }]
                     ]
