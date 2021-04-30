@@ -134,17 +134,17 @@ bot.on('message', msg => {
             // ========================================================= CALENDAR ====================================================================
 
             // Item 1 ========== 🎲 ВЕЧЕР НАСТОЛЬНЫХ ИГР =============================
-        case kb.calendar.game:
-            bot.sendPhoto(chatId, files.calendarPic1, {
-                caption: messages.calendarObj.game,
+        case calendar.calendarKeyboard.item1:
+            bot.sendPhoto(chatId, calendar.calendarPic1, {
+                caption: calendar.calendarObj.item1,
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.apple,
-                            url: kb.appleItemFirst
+                            text: calendar.apple,
+                            url: calendar.appleItemFirst
                         }, {
-                            text: kb.google,
-                            url: kb.googleItemFirst
+                            text: calendar.google,
+                            url: calendar.googleItemFirst
                         }]
                     ]
                 }
