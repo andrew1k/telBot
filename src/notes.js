@@ -1,4 +1,4 @@
-madule.exports = {
+module.exports = {
     url:'https://www.youtube.com/watch?v=qQgM-6hf4xg',
     text:`11.04.2021 Ирина Скоробогатова
 
