@@ -10,17 +10,6 @@ module.exports = {
                 item8: ``,
                 goHome: `🌐 Главное меню`,
         },
-        calendarKeys: [
-                [this.calendarKeyboard.item1],
-                [this.calendarKeyboard.item2],
-                [this.calendarKeyboard.item3],
-                [this.calendarKeyboard.item4],
-                [this.calendarKeyboard.item5],
-                [this.calendarKeyboard.item6],
-                // [this.calendarKeyboard.item7],
-                // [this.calendarKeyboard.item8],
-                [this.calendarKeyboard.goHome],
-        ],
         calendar: `📆 СОБЫТИЯ ЭТОГО МЕСЯЦА
 Вы можете узнать актуальную информацию о мероприятиях церкви и добавить их в свой календарь, перейдя по ссылке с нужным мероприятием.`,
 

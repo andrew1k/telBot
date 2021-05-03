@@ -51,7 +51,7 @@ bot.on('message', msg => {
         case kb.home.calendar:
             bot.sendMessage(chatId, calendar.calendar, {
                 reply_markup: {
-                    keyboard: calendar.calendarKeys
+                    keyboard: keyboard.calendar
                 }
             })
             break
