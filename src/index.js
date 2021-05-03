@@ -49,9 +49,9 @@ bot.on('message', msg => {
     switch (msg.text) {
         // Main menu ===============================================================================
         case kb.home.calendar:
-            bot.sendMessage(chatId, messages.calendar, {
+            bot.sendMessage(chatId, calendar.calendar, {
                 reply_markup: {
-                    keyboard: keyboard.calendar
+                    keyboard: calendar.calendarKeys
                 }
             })
             break
@@ -131,111 +131,149 @@ bot.on('message', msg => {
             })
             break
 
-            // ========================================================= CALENDAR ====================================================================
+        // ========================================================= CALENDAR ====================================================================
 
-            // Item 1 ========== 🎲 ВЕЧЕР НАСТОЛЬНЫХ ИГР =============================
+        // Item 1 ================================================================================
         case calendar.calendarKeyboard.item1:
             bot.sendPhoto(chatId, calendar.calendarPic1, {
-                caption: calendar.calendarObj.item1,
+                caption: calendar.item1,
                 reply_markup: {
                     inline_keyboard: [
                         [{
                             text: calendar.apple,
-                            url: calendar.appleItemFirst
+                            url: calendar.appleItem1
                         }, {
                             text: calendar.google,
-                            url: calendar.googleItemFirst
+                            url: calendar.googleItem1
                         }]
                     ]
                 }
             })
             break
 
-            // Item 2 ========== 🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА ==============================
-        case kb.calendar.pray:
-            bot.sendPhoto(chatId, files.calendarPic2, {
-                caption: messages.calendarObj.pray,
+        // Item 2 ================================================================================
+        case calendar.calendarKeyboard.item2:
+            bot.sendPhoto(chatId, calendar.calendarPic2, {
+                caption: calendar.item2,
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.apple,
-                            url: kb.appleItemSecond
+                            text: calendar.apple,
+                            url: calendar.appleItem2
                         }, {
-                            text: kb.google,
-                            url: kb.googleItemSecond
+                            text: calendar.google,
+                            url: calendar.googleItem2
                         }]
                     ]
                 }
             })
             break
-
-            // Item 3 ========== Боулинг =========================================
-        case kb.calendar.turnout:
-            bot.sendPhoto(chatId, files.calendarPic3, {
-                caption: messages.calendarObj.turnout,
+        // Item 3 ================================================================================
+        case calendar.calendarKeyboard.item3:
+            bot.sendPhoto(chatId, calendar.calendarPic3, {
+                caption: calendar.item3,
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.signUpBtn,
-                            url: kb.signUpUrl
-                        }]
-                    ]
-                }
-            })
-            break
-
-            // ==================== ☕️ Чай с Пастором =================================
-        case kb.calendar.teaWithPastor:
-            bot.sendPhoto(chatId, files.calendarPic4, {
-                caption: messages.calendarObj.teaWithPastor,
-                reply_markup: {
-                    inline_keyboard: [
-                        [{
-                            text: kb.signUpBtn,
-                            url: kb.signUpUrl,
-                        }]
-                    ]
-                }
-            })
-            break
-
-            // ==================== ☕️ Tok Show =================================
-        case kb.calendar.tokshow:
-            bot.sendPhoto(chatId, files.calendarPicForTokShow, {
-                caption: messages.calendarObj.stepsInSundays,
-                reply_markup: {
-                    inline_keyboard: [
-                        [{
-                            text: kb.apple,
-                            url: kb.appleItemFourth,
+                            text: calendar.apple,
+                            url: calendar.appleItem3
                         }, {
-                            text: kb.google,
-                            url: kb.googleItemFourth
+                            text: calendar.google,
+                            url: calendar.googleItem3
                         }]
                     ]
                 }
             })
             break
-            // ===================== DomashkaParty ===================================
-        case kb.calendar.domashkaParty:
-            bot.sendPhoto(chatId, files.calendarPicDomashkaParty, {
-                caption: messages.calendarObj.domashkaParty,
+        // Item 4 ================================================================================
+        case calendar.calendarKeyboard.item4:
+            bot.sendPhoto(chatId, calendar.calendarPic4, {
+                caption: calendar.item4,
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.apple,
-                            url: kb.appleItemThird,
+                            text: calendar.apple,
+                            url: calendar.appleItem4
                         }, {
-                            text: kb.google,
-                            url: kb.googleItemThird
+                            text: calendar.google,
+                            url: calendar.googleItem4
                         }]
                     ]
                 }
             })
             break
+        // Item 5 ================================================================================
+        case calendar.calendarKeyboard.item5:
+            bot.sendPhoto(chatId, calendar.calendarPic5, {
+                caption: calendar.item5,
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: calendar.apple,
+                            url: calendar.appleItem5
+                        }, {
+                            text: calendar.google,
+                            url: calendar.googleItem5
+                        }]
+                    ]
+                }
+            })
+            break
+        // Item 6 ================================================================================
+        case calendar.calendarKeyboard.item6:
+            bot.sendPhoto(chatId, calendar.calendarPic6, {
+                caption: calendar.item6,
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: calendar.apple,
+                            url: calendar.appleItem6
+                        }, {
+                            text: calendar.google,
+                            url: calendar.googleItem6
+                        }]
+                    ]
+                }
+            })
+            break
+        // Item 7 ================================================================================
+        // case calendar.calendarKeyboard.item7:
+        //     bot.sendPhoto(chatId, calendar.calendarPic7, {
+        //         caption: calendar.item7,
+        //         reply_markup: {
+        //             inline_keyboard: [
+        //                 [{
+        //                     text: calendar.apple,
+        //                     url: calendar.appleItem7
+        //                 }, {
+        //                     text: calendar.google,
+        //                     url: calendar.googleItem7
+        //                 }]
+        //             ]
+        //         }
+        //     })
+        //     break
+        // // Item 8 ================================================================================
+        // case calendar.calendarKeyboard.item8:
+        //     bot.sendPhoto(chatId, calendar.calendarPic8, {
+        //         caption: calendar.item8,
+        //         reply_markup: {
+        //             inline_keyboard: [
+        //                 [{
+        //                     text: calendar.apple,
+        //                     url: calendar.appleItem8
+        //                 }, {
+        //                     text: calendar.google,
+        //                     url: calendar.googleItem8
+        //                 }]
+        //             ]
+        //         }
+        //     })
+        //     break
 
-            // Go Home
-        case kb.calendar.goHome:
+
+        // Go Home
+        case calendar.calendarKeyboard.goHome:
             bot.sendMessage(chatId, kb.homeBtn, {
                 reply_markup: {
                     keyboard: keyboard.home
@@ -243,7 +281,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Small Groups ===================================================================
+        // Small Groups ===================================================================
         case kb.smallGroups.sgMember:
             bot.sendMessage(chatId, messages.smallGroupsObj.sgMember, {
                 reply_markup: {
@@ -292,9 +330,9 @@ bot.on('message', msg => {
             })
             break
 
-            // ========================================================== Serv =========================================================================
+        // ========================================================== Serv =========================================================================
 
-            // ServAll
+        // ServAll
         case kb.serv.servAll:
             bot.sendMessage(chatId, messages.servAll, {
                 reply_markup: {
@@ -302,7 +340,7 @@ bot.on('message', msg => {
                 }
             })
             break
-            // Serv Hire
+        // Serv Hire
         case kb.serv.servHire:
             bot.sendMessage(chatId, messages.servHire, {
                 reply_markup: {
@@ -323,7 +361,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Serv Unknown
+        // Serv Unknown
         case kb.serv.servunknown:
             bot.sendMessage(chatId, messages.servunknown, {
                 reply_markup: {
@@ -337,7 +375,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Go Home
+        // Go Home
         case kb.serv.goHome:
             bot.sendMessage(chatId, kb.homeBtn, {
                 reply_markup: {
@@ -346,9 +384,9 @@ bot.on('message', msg => {
             })
             break
 
-            // ============================================================ ServAll ========================================================================
+        // ============================================================ ServAll ========================================================================
 
-            // My Generation
+        // My Generation
         case kb.servAll.servMyGeneration:
             bot.sendMessage(chatId, messages.servAllObj.servMyGeneration, {
                 reply_markup: {
@@ -362,7 +400,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Worship
+        // Worship
         case kb.servAll.servWorship:
             bot.sendMessage(chatId, messages.servAllObj.servWorship, {
                 reply_markup: {
@@ -376,7 +414,7 @@ bot.on('message', msg => {
             })
             break
 
-            // InfoStand
+        // InfoStand
         case kb.servAll.servInfo:
             bot.sendMessage(chatId, messages.servAllObj.servInfo, {
                 reply_markup: {
@@ -390,7 +428,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Cafe
+        // Cafe
         case kb.servAll.servCafe:
             bot.sendMessage(chatId, messages.servAllObj.servCafe, {
                 reply_markup: {
@@ -404,7 +442,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Ashers
+        // Ashers
         case kb.servAll.servAsher:
             bot.sendMessage(chatId, messages.servAllObj.servAsher, {
                 reply_markup: {
@@ -418,7 +456,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Communion
+        // Communion
         case kb.servAll.servCommunion:
             bot.sendMessage(chatId, messages.servAllObj.servCommunion, {
                 reply_markup: {
@@ -432,7 +470,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Childs 
+        // Childs 
         case kb.servAll.servChild:
             bot.sendMessage(chatId, messages.servAllObj.servChild, {
                 reply_markup: {
@@ -446,7 +484,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Comutication
+        // Comutication
         case kb.servAll.servComunication:
             bot.sendMessage(chatId, messages.servAllObj.servComunication, {
                 reply_markup: {
@@ -460,7 +498,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Meeting
+        // Meeting
         case kb.servAll.servMeeting:
             bot.sendMessage(chatId, messages.servAllObj.servMeeting, {
                 reply_markup: {
@@ -474,7 +512,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Social Web
+        // Social Web
         case kb.servAll.servSocialWeb:
             bot.sendMessage(chatId, messages.servAllObj.servSocialWeb, {
                 reply_markup: {
@@ -488,7 +526,7 @@ bot.on('message', msg => {
             })
             break
 
-            // Back to Serv
+        // Back to Serv
         case kb.servAll.backToServ:
             bot.sendMessage(chatId, messages.serv, {
                 reply_markup: {
@@ -497,7 +535,7 @@ bot.on('message', msg => {
             })
             break
 
-            // ======================================================= LearnMore ==============================================================================
+        // ======================================================= LearnMore ==============================================================================
 
         case kb.learnMore.aboutChurch:
             bot.sendPhoto(chatId, files.aboutChurch, {
@@ -567,7 +605,7 @@ bot.on('message', msg => {
                 }
             })
             break
-            //=========================================================== Materials For Small Groups ==============================================================================
+        //=========================================================== Materials For Small Groups ==============================================================================
         case kb.materialsForSG.msgHelp:
             bot.sendMessage(chatId, messages.materialsForSGObj.msgHelp, {
                 reply_markup: {
