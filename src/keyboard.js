@@ -1,4 +1,5 @@
 const kb = require('./keyboard-buttons')
+const calendar = require('./calendar')
 // Keyboard 
 module.exports = {
     home: [
@@ -9,14 +10,15 @@ module.exports = {
         [kb.home.materialsForSG]
     ],
     calendar: [
-        [kb.calendar.game],
-        [kb.calendar.pray],
-        [kb.calendar.tokshow],
-        [kb.calendar.turnout],
-        [kb.calendar.domashkaParty],
-        [kb.calendar.teaWithPastor],
-        // [kb.calendar.stepsInSundays],
-        [kb.calendar.goHome],
+        [calendar.calendarKeyboard.item1],
+        [calendar.calendarKeyboard.item2],
+        [calendar.calendarKeyboard.item3],
+        [calendar.calendarKeyboard.item4],
+        [calendar.calendarKeyboard.item5],
+        [calendar.calendarKeyboard.item6],
+        // [calendar.calendarKeyboard.item7],
+        // [calendar.calendarKeyboard.item8],
+        [calendar.calendarKeyboard.goHome],
     ],
     smallGroups: [
         [kb.smallGroups.sgMember],
