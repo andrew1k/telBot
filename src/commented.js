@@ -84,4 +84,106 @@
             //         }
             //     })
             //     break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //     // From calendar 
+
+            
+        // // Item 2 ========== 🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА ==============================
+        // case kb.calendar.pray:
+        //     bot.sendPhoto(chatId, files.calendarPic2, {
+        //         caption: messages.calendarObj.pray,
+        //         reply_markup: {
+        //             inline_keyboard: [
+        //                 [{
+        //                     text: kb.apple,
+        //                     url: kb.appleItemSecond
+        //                 }, {
+        //                     text: kb.google,
+        //                     url: kb.googleItemSecond
+        //                 }]
+        //             ]
+        //         }
+        //     })
+        //     break
+
+        // // Item 3 ========== Боулинг =========================================
+        // case kb.calendar.turnout:
+        //     bot.sendPhoto(chatId, files.calendarPic3, {
+        //         caption: messages.calendarObj.turnout,
+        //         reply_markup: {
+        //             inline_keyboard: [
+        //                 [{
+        //                     text: kb.signUpBtn,
+        //                     url: kb.signUpUrl
+        //                 }]
+        //             ]
+        //         }
+        //     })
+        //     break
+
+        // // ==================== ☕️ Чай с Пастором =================================
+        // case kb.calendar.teaWithPastor:
+        //     bot.sendPhoto(chatId, files.calendarPic4, {
+        //         caption: messages.calendarObj.teaWithPastor,
+        //         reply_markup: {
+        //             inline_keyboard: [
+        //                 [{
+        //                     text: kb.signUpBtn,
+        //                     url: kb.signUpUrl,
+        //                 }]
+        //             ]
+        //         }
+        //     })
+        //     break
+
+        // // ==================== ☕️ Tok Show =================================
+        // case kb.calendar.tokshow:
+        //     bot.sendPhoto(chatId, files.calendarPicForTokShow, {
+        //         caption: messages.calendarObj.stepsInSundays,
+        //         reply_markup: {
+        //             inline_keyboard: [
+        //                 [{
+        //                     text: kb.apple,
+        //                     url: kb.appleItemFourth,
+        //                 }, {
+        //                     text: kb.google,
+        //                     url: kb.googleItemFourth
+        //                 }]
+        //             ]
+        //         }
+        //     })
+        //     break
+        // // ===================== DomashkaParty ===================================
+        // case kb.calendar.domashkaParty:
+        //     bot.sendPhoto(chatId, files.calendarPicDomashkaParty, {
+        //         caption: messages.calendarObj.domashkaParty,
+        //         reply_markup: {
+        //             inline_keyboard: [
+        //                 [{
+        //                     text: kb.apple,
+        //                     url: kb.appleItemThird,
+        //                 }, {
+        //                     text: kb.google,
+        //                     url: kb.googleItemThird
+        //                 }]
+        //             ]
+        //         }
+        //     })
+        //     break
     
