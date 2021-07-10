@@ -47,6 +47,24 @@ bot.on('message', msg => {
     const chatId = helper.getChatId(msg)
 
     switch (msg.text) {
+        // temp addings 
+        case `📊 Опрос`:
+            bot.sendMessage(chatId, `Мы хотим сделать наше кафе после молодёжного богослужения в Малом Зале лучше и просим вас о помощи в этом. Ответьте, пожалуйста, анонимно на наши вопросы`, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: `Пройти опрос`,
+                            url: `https://forms.gle/jrzKdFxbHU2fr6nP6`,
+                        }]
+                    ]
+                }
+            })
+            console.log(helper.debug(`From form 
+ chatID: ${chatId},
+ userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
+ date: ${msg.date},
+ text: ${msg.text}`));
+            break
         // Main menu ===============================================================================
         case kb.home.calendar:
             bot.sendMessage(chatId, calendar.calendar, {
@@ -54,6 +72,11 @@ bot.on('message', msg => {
                     keyboard: keyboard.calendar
                 }
             })
+            console.log(helper.debug(`From calendar 
+ chatID: ${chatId},
+ userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
+ date: ${msg.date},
+ text: ${msg.text}`));
             break
         case kb.home.smallGroups:
             bot.sendMessage(chatId, messages.smallGroups, {
