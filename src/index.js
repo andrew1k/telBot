@@ -254,22 +254,22 @@ bot.on('message', msg => {
         //     })
         //     break
         // // Item 8 ================================================================================
-        // case calendar.calendarKeyboard.item8:
-        //     bot.sendPhoto(chatId, calendar.calendarPic8, {
-        //         caption: calendar.item8,
-        //         reply_markup: {
-        //             inline_keyboard: [
-        //                 [{
-        //                     text: calendar.apple,
-        //                     url: calendar.appleItem8
-        //                 }, {
-        //                     text: calendar.google,
-        //                     url: calendar.googleItem8
-        //                 }]
-        //             ]
-        //         }
-        //     })
-        //     break
+        case calendar.calendarKeyboard.item8:
+            bot.sendPhoto(chatId, calendar.calendarPic8, {
+                caption: calendar.item8,
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: calendar.apple,
+                            url: calendar.appleItem8
+                        }, {
+                            text: calendar.google,
+                            url: calendar.googleItem8
+                        }]
+                    ]
+                }
+            })
+            break
 
 
         // Go Home
