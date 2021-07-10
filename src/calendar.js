@@ -73,7 +73,7 @@ module.exports = {
 
         // Item 8 =================================================================================
         item8: ``,
-        calendarPic8: ``,
+        calendarPic8: `https://sun9-83.userapi.com/impg/0Vqhy0y4V6cuO3nmv7115KgauIBwmLoQGjEUJQ/4_YWAc7Yyjk.jpg?size=1080x1080&quality=96&sign=7dae9f39ec0087d86977b0ab3d067f0b&type=album`,
         // Calendar inline_keyboard
         apple: 'Apple',
         google: 'Google',
