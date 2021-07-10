@@ -48,13 +48,13 @@ bot.on('message', msg => {
 
     switch (msg.text) {
         // temp addings 
-        case `📊 Опрос`:
+        case kb.home.form:
             bot.sendMessage(chatId, `Мы хотим сделать наше кафе после молодёжного богослужения в Малом Зале лучше и просим вас о помощи в этом. Ответьте, пожалуйста, анонимно на наши вопросы`, {
                 reply_markup: {
                     inline_keyboard: [
                         [{
                             text: `Пройти опрос`,
-                            url: `https://forms.gle/jrzKdFxbHU2fr6nP6`,
+                            url: `https://forms.gle/jrzKdFxbHU2fr6nP6`
                         }]
                     ]
                 }
