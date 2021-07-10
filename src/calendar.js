@@ -22,13 +22,13 @@ module.exports = {
         googleItem1: 'https://calndr.link/e/DDgvtGdaKH' + '?s=google',
         calendarPic1: 'https://sun9-76.userapi.com/impf/cKP3st7ukw50J0bxOgGH3w3EsqAR1Vf5S1PbFg/Lw0cI906hfA.jpg?size=1280x1280&quality=96&sign=e981494dc59ec1e3f0bbc79e061e8380&type=album',
         // Item 2 ================================================================================
-        item2: `🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА 27 апреля в 19:00
-Колизей, Невский 100, 2 этаж, Тренинг Зал
+        item2: `🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА 27 июля в 19:00
+Колизей, Невский 100, Малый Зал
 
 Добавить в календарь ⬇️`,
-        appleItem2: 'https://calndr.link/e/N0LXaPrTun' + '?s=apple',
-        googleItem2: 'https://calndr.link/e/N0LXaPrTun' + '?s=google',
-        calendarPic2: 'https://psv4.userapi.com/c536236/u38543685/docs/d27/91ba9727d706/Molitva.png?extra=Une9otM32KIq253fuG84L3UyDU7pyW5I7JT8fMKb5f4EXwE5W-_TtlMPzUXzf_QFM15BK4zPAPjKpqYOKuEc8bBfK7FBthGWm2WQQI41fJ77W7EpzufmUvNw0M4K2CVJbFlkFVNBdpGpS0ariJlb5O8X',
+        appleItem2: 'https://calndr.link/e/OqJR1gdWdy' + '?s=apple',
+        googleItem2: 'https://calndr.link/e/OqJR1gdWdy' + '?s=google',
+        calendarPic2: 'https://sun9-51.userapi.com/impg/K-guK4BPSb4JSietiF-0Tse78UMLGu5Uqs9L-Q/xxEWayv5Rr8.jpg?size=905x910&quality=96&sign=732596ec60f4fe2de317e030c7e89428&type=album',
         // Item 3 ================================================================================
         item3: `🏆 Боулинг 21 апреля в 19:00
 ТК Сенная. 
