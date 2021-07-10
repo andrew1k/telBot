@@ -192,8 +192,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: signUpBtn,
-                            url: signUpUrl
+                            text: kb.signUpBtn,
+                            url: kb.signUpUrl
                         }]
                     ]
                 }
@@ -253,15 +253,12 @@ bot.on('message', msg => {
         // // Item 8 ================================================================================
         case calendar.calendarKeyboard.item8:
             bot.sendPhoto(chatId, calendar.calendarPic8, {
-                caption: calendar.item8,
+                // caption: calendar.item8,
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: calendar.apple,
-                            url: calendar.appleItem8
-                        }, {
-                            text: calendar.google,
-                            url: calendar.googleItem8
+                            text: `Подробности и записаться`,
+                            url: kb.signUpUrl
                         }]
                     ]
                 }

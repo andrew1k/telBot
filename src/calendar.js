@@ -69,6 +69,11 @@ module.exports = {
         calendarPic4: 'https://sun9-9.userapi.com/impf/tGtXPzIAF9FhwA1GBhNypAge0-UH4H-yNtzw5Q/di1hQKHE4c0.jpg?size=1080x1348&quality=96&proxy=1&sign=a539b4ceb24fee03cf5e2c10d236b224&type=album',
         // =======================================================================================
 
+
+
+        // Item 8 =================================================================================
+        item8: ``,
+        calendarPic8: ``,
         // Calendar inline_keyboard
         apple: 'Apple',
         google: 'Google',
