@@ -3,7 +3,7 @@ const calendar = require('./calendar')
 // Keyboard 
 module.exports = {
     home: [
-        [`📊 Опрос`]
+        [kb.home.form]
         [kb.home.calendar],
         [kb.home.smallGroups, kb.home.serv],
         [kb.home.learnMore, kb.home.mainSteps],
