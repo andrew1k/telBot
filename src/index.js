@@ -59,11 +59,11 @@ bot.on('message', msg => {
                     ]
                 }
             })
-            console.log(helper.debug(`From form 
- chatID: ${chatId},
- userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
- date: ${msg.date},
- text: ${msg.text}`));
+//             console.log(helper.debug(`From form 
+//  chatID: ${chatId},
+//  userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
+//  date: ${msg.date},
+//  text: ${msg.text}`));
             break
         // Main menu ===============================================================================
         case kb.home.calendar:
@@ -72,11 +72,11 @@ bot.on('message', msg => {
                     keyboard: keyboard.calendar
                 }
             })
-            console.log(helper.debug(`From calendar 
- chatID: ${chatId},
- userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
- date: ${msg.date},
- text: ${msg.text}`));
+//             console.log(helper.debug(`From calendar 
+//  chatID: ${chatId},
+//  userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
+//  date: ${msg.date},
+//  text: ${msg.text}`));
             break
         case kb.home.smallGroups:
             bot.sendMessage(chatId, messages.smallGroups, {
