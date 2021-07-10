@@ -38,16 +38,16 @@ module.exports = {
         googleItem3: 'https://calndr.link/e/HQLXeygcTM' + '?s=google',
         calendarPic3: 'https://www.openbusiness.ru/upload/iblock/42e/bowl.jpg',
         // Item 4 ================================================================================
-        item4: `11 апреля в 17:30 в малом зале
+        item6: `11 апреля в 17:30 в малом зале
         
 Продолжение ТОК-ШОУ с пастором Даниилом и его женой Анастасией на тему семейных отношений. 
     
 Возрастное ограничение 18+
 
 Добавить в календарь ⬇️`,
-        appleItem4: 'https://calndr.link/e/9xmZkdOjHo' + '?s=apple',
-        googleItem4: 'https://calndr.link/e/9xmZkdOjHo' + '?s=google',
-        calendarPic4: 'https://sun9-9.userapi.com/impf/tGtXPzIAF9FhwA1GBhNypAge0-UH4H-yNtzw5Q/di1hQKHE4c0.jpg?size=1080x1348&quality=96&proxy=1&sign=a539b4ceb24fee03cf5e2c10d236b224&type=album',
+        appleItem6: 'https://calndr.link/e/9xmZkdOjHo' + '?s=apple',
+        googleItem6: 'https://calndr.link/e/9xmZkdOjHo' + '?s=google',
+        calendarPic6: '',
         // Item 5 ================================================================================
         item5: `25 апреля 17:30 в малом зале
         
@@ -58,13 +58,15 @@ module.exports = {
         googleItem5: '' + '?s=google',
         calendarPic5: 'https://mbv.spb.ru/wp-content/uploads/2016/08/cover-book2-1024x853-1.jpg',
         // Item 6 ================================================================================
-        item6: `Эта встреча для тех, кто недавно в церкви, дома у пастора Даниила Шатрова, чтобы в домашней обстановке, за чашечкой чая познакомиться ближе с пастором и его семьей, пообщаться друг с другом и хорошо провести время вместе.
+        item4: `Эта встреча для тех, кто недавно в церкви, дома у пастора Даниила Шатрова, чтобы в домашней обстановке, за чашечкой чая познакомиться ближе с пастором и его семьей, пообщаться друг с другом и хорошо провести время вместе.
 Встреча проходит раз в несколько месяцев, в воскресный день после молодежного богослужения.
 
+Ближайшая встреча будет 11 июля.
+
 Записаться ⬇️`,
-        appleItem6: '' + '?s=apple',
-        googleItem6: '' + '?s=google',
-        calendarPic6: '',
+        appleItem4: '' + '?s=apple',
+        googleItem4: '' + '?s=google',
+        calendarPic4: 'https://sun9-9.userapi.com/impf/tGtXPzIAF9FhwA1GBhNypAge0-UH4H-yNtzw5Q/di1hQKHE4c0.jpg?size=1080x1348&quality=96&proxy=1&sign=a539b4ceb24fee03cf5e2c10d236b224&type=album',
         // =======================================================================================
 
         // Calendar inline_keyboard

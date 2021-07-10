@@ -19,7 +19,7 @@ const {
     createBrotliCompress
 } = require('zlib')
 const {
-    learnMore
+    learnMore, signUpBtn, signUpUrl
 } = require('./keyboard-buttons')
 const {
     url
@@ -192,11 +192,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: calendar.apple,
-                            url: calendar.appleItem4
-                        }, {
-                            text: calendar.google,
-                            url: calendar.googleItem4
+                            text: signUpBtn,
+                            url: signUpUrl
                         }]
                     ]
                 }
