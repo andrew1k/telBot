@@ -3,7 +3,7 @@ const calendar = require('./calendar')
 // Keyboard 
 module.exports = {
     home: [
-        [kb.home.form],
+        // [kb.home.form],
         [kb.home.calendar],
         [kb.home.smallGroups, kb.home.serv],
         [kb.home.learnMore, kb.home.mainSteps],
@@ -11,12 +11,12 @@ module.exports = {
         [kb.home.materialsForSG]
     ],
     calendar: [
-        // [calendar.calendarKeyboard.item1],
-        [calendar.calendarKeyboard.item8],
+        [calendar.calendarKeyboard.item1],
+        [calendar.calendarKeyboard.item6],
         // [calendar.calendarKeyboard.item3],
         [calendar.calendarKeyboard.item4],
         // [calendar.calendarKeyboard.item5],
-        // [calendar.calendarKeyboard.item6],
+        // [calendar.calendarKeyboard.item8],
         // [calendar.calendarKeyboard.item7],
         [calendar.calendarKeyboard.item2],
         [calendar.calendarKeyboard.goHome],

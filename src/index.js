@@ -163,11 +163,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: calendar.apple,
-                            url: calendar.appleItem1
-                        }, {
-                            text: calendar.google,
-                            url: calendar.googleItem1
+                            text: kb.signUpBtn,
+                            url: kb.signUpUrl
                         }]
                     ]
                 }
@@ -243,17 +240,17 @@ bot.on('message', msg => {
         case calendar.calendarKeyboard.item6:
             bot.sendPhoto(chatId, calendar.calendarPic6, {
                 caption: calendar.item6,
-                reply_markup: {
-                    inline_keyboard: [
-                        [{
-                            text: calendar.apple,
-                            url: calendar.appleItem6
-                        }, {
-                            text: calendar.google,
-                            url: calendar.googleItem6
-                        }]
-                    ]
-                }
+                // reply_markup: {
+                //     inline_keyboard: [
+                //         [{
+                //             text: calendar.apple,
+                //             url: calendar.appleItem6
+                //         }, {
+                //             text: calendar.google,
+                //             url: calendar.googleItem6
+                //         }]
+                //     ]
+                // }
             })
             break
         // Item 7 ================================================================================
