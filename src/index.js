@@ -163,8 +163,11 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: kb.signUpBtn,
-                            url: kb.signUpUrl
+                            text: calendar.apple,
+                            url: calendar.appleItem1
+                        }, {
+                            text: calendar.google,
+                            url: calendar.googleItem1
                         }]
                     ]
                 }
