@@ -59,11 +59,11 @@ bot.on('message', msg => {
                     ]
                 }
             })
-//             console.log(helper.debug(`From form 
-//  chatID: ${chatId},
-//  userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
-//  date: ${msg.date},
-//  text: ${msg.text}`));
+            //             console.log(helper.debug(`From form 
+            //  chatID: ${chatId},
+            //  userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
+            //  date: ${msg.date},
+            //  text: ${msg.text}`));
             break
         // Main menu ===============================================================================
         case kb.home.calendar:
@@ -72,11 +72,11 @@ bot.on('message', msg => {
                     keyboard: keyboard.calendar
                 }
             })
-//             console.log(helper.debug(`From calendar 
-//  chatID: ${chatId},
-//  userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
-//  date: ${msg.date},
-//  text: ${msg.text}`));
+            //             console.log(helper.debug(`From calendar 
+            //  chatID: ${chatId},
+            //  userID: ${msg.from.id}, firstName: ${msg.from.first_name}, username: ${msg.from.username},
+            //  date: ${msg.date},
+            //  text: ${msg.text}`));
             break
         case kb.home.smallGroups:
             bot.sendMessage(chatId, messages.smallGroups, {
@@ -532,6 +532,132 @@ bot.on('message', msg => {
         // Social Web
         case kb.servAll.servSocialWeb:
             bot.sendMessage(chatId, messages.servAllObj.servSocialWeb, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: kb.signUpUrl,
+                        }]
+                    ]
+                }
+            })
+            break
+
+        // Hello
+        case kb.servAll.servHello:
+            bot.sendMessage(chatId, messages.servAllObj.servHello, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: kb.signUpUrl,
+                        }]
+                    ]
+                }
+            })
+            break
+
+        // Teenagers
+        case kb.servAll.servTeenagers:
+            bot.sendMessage(chatId, messages.servAllObj.servTeenagers, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: kb.signUpUrl,
+                        }]
+                    ]
+                }
+            })
+            break
+
+        // Pray
+        case kb.servAll.servPray:
+            bot.sendMessage(chatId, messages.servAllObj.servPray, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: kb.signUpUrl,
+                        }]
+                    ]
+                }
+            })
+            break
+
+        // Theatre
+        case kb.servAll.servTheatre:
+            bot.sendMessage(chatId, messages.servAllObj.servTheatre, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: kb.signUpUrl,
+                        }]
+                    ]
+                }
+            })
+            break
+
+        // Family 
+        case kb.servAll.servFamily:
+            bot.sendMessage(chatId, messages.servAllObj.servFamily, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: kb.signUpUrl,
+                        }]
+                    ]
+                }
+            })
+            break
+
+        // Decoration
+        case kb.servAll.servDecoration:
+            bot.sendMessage(chatId, messages.servAllObj.servDecoration, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: kb.signUpUrl,
+                        }]
+                    ]
+                }
+            })
+            break
+
+        // Youth Worship
+        case kb.servAll.servYouthWorship:
+            bot.sendMessage(chatId, messages.servAllObj.servYouthWorship, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: kb.signUpUrl,
+                        }]
+                    ]
+                }
+            })
+            break
+
+        // Outreach
+        case kb.servAll.servOutreach:
+            bot.sendMessage(chatId, messages.servAllObj.servOutreach, {
+                reply_markup: {
+                    inline_keyboard: [
+                        [{
+                            text: kb.writeLeader,
+                            url: kb.signUpUrl,
+                        }]
+                    ]
+                }
+            })
+            break
+
+        // Fonds
+        case kb.servAll.servFonds:
+            bot.sendMessage(chatId, messages.servAllObj.servFonds, {
                 reply_markup: {
                     inline_keyboard: [
                         [{

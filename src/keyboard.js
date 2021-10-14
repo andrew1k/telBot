@@ -39,6 +39,11 @@ module.exports = {
         [kb.servAll.servAsher, kb.servAll.servCommunion],
         [kb.servAll.servChild, kb.servAll.servComunication],
         [kb.servAll.servMeeting, kb.servAll.servSocialWeb],
+        [kb.servAll.servHello, kb.servAll.servTeenagers],
+        [kb.servAll.servPray, kb.servAll.servTheatre],
+        [kb.servAll.servFamily, kb.servAll.servDecoration],
+        [kb.servAll.servYouthWorship, kb.servAll.servOutreach],
+        [kb.servAll.servFonds],
         [kb.servAll.backToServ] 
     ],
     learnMore: [
