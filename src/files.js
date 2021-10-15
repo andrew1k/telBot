@@ -19,6 +19,8 @@ module.exports = {
 
     mapUrl: 'https://yandex.ru/maps/?um=constructor%3A35dad1dc46caf371e7d494ce0a91041adc121c5fde390dd1c7217bd6faee2a13&source=constructorLink',
 
+    servFondsBook: './materials/Фонды и другие служения.docx',
+
     // materials for small groups
     materialsForSG: {
         danBook: './materials/Сила Малой группы.pdf',

@@ -620,7 +620,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.writeLeader,
-                            url: kb.signUpUrl,
+                            url: kb.messToKarina,
                         }]
                     ]
                 }
@@ -657,7 +657,7 @@ bot.on('message', msg => {
 
         // Fonds
         case kb.servAll.servFonds:
-            bot.sendMessage(chatId, messages.servAllObj.servFonds, {
+            bot.sendDocument(chatId, files.servFondsBook, {
                 reply_markup: {
                     inline_keyboard: [
                         [{
