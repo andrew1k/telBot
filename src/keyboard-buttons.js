@@ -106,7 +106,7 @@ module.exports = {
     respondBtn: 'Написать',
     respondForSG: 't.me/nesilchuk',
     respondUrl: 'https://t.me/mbvadmin',
-
+    messToLiza: 'https://t.me/silchuuk',
     messToKarina: 't.me/karina_dmitrienko',
 
     // Vitalik 

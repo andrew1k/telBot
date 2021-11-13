@@ -163,11 +163,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: calendar.apple,
-                            url: calendar.appleItem1
-                        }, {
-                            text: calendar.google,
-                            url: calendar.googleItem1
+                            text: kb.signUpBtn,
+                            url: kb.signUpUrl
                         }]
                     ]
                 }
@@ -198,11 +195,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: calendar.apple,
-                            url: calendar.appleItem3
-                        }, {
-                            text: calendar.google,
-                            url: calendar.googleItem3
+                            text: kb.signUpBtn,
+                            url: kb.messToKarina
                         }]
                     ]
                 }
@@ -229,11 +223,8 @@ bot.on('message', msg => {
                 reply_markup: {
                     inline_keyboard: [
                         [{
-                            text: calendar.apple,
-                            url: calendar.appleItem5
-                        }, {
-                            text: calendar.google,
-                            url: calendar.googleItem5
+                            text: kb.signUpBtn,
+                            url: kb.messToLiza
                         }]
                     ]
                 }
