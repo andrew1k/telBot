@@ -164,7 +164,7 @@ bot.on('message', msg => {
                     inline_keyboard: [
                         [{
                             text: kb.signUpBtn,
-                            url: kb.signUpUrl
+                            url: 'https://t.me/andreypivovarov'
                         }]
                     ]
                 }
