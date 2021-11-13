@@ -12,10 +12,10 @@ module.exports = {
     ],
     calendar: [
         [calendar.calendarKeyboard.item1],
+        [calendar.calendarKeyboard.item5],
         [calendar.calendarKeyboard.item6],
-        // [calendar.calendarKeyboard.item3],
-        [calendar.calendarKeyboard.item4],
-        // [calendar.calendarKeyboard.item5],
+        [calendar.calendarKeyboard.item3],
+        // [calendar.calendarKeyboard.item4],
         // [calendar.calendarKeyboard.item8],
         // [calendar.calendarKeyboard.item7],
         [calendar.calendarKeyboard.item2],
