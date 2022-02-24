@@ -1,10 +1,10 @@
 module.exports = {
         calendarKeyboard: {
-                item1: `❄️ Каток`,
+                // item1: `❄️ Каток`,
                 item2: `🙏🏻 Молодежная молитва`,
-                item3: `🙏 Крещение`,
+                // item3: `🙏 Крещение`,
                 // item4: `☕️ Чай с Пастором`,
-                item5: `🎤 Семинар по благовестию`,
+                // item5: `🎤 Семинар по благовестию`,
                 item6: `👣 ШАГ 1 / ШАГ 3`,
                 // item7: `🏄 Домашка-Party`,
                 // item8: `🏠 Молодежный выезд`,
@@ -25,12 +25,13 @@ module.exports = {
         // googleItem1: 'https://calndr.link/e/jR51bq40XN' + '?s=google',
         calendarPic1: 'https://sun9-58.userapi.com/impg/1rLDeEWxOb3hLZijCvrHRPSGVBNy-gjUrp0aWQ/JxVzuqvQmG4.jpg?size=604x604&quality=96&sign=b9f458319e25167198d139a73daedf0c&type=album',
         // Item 2 ================================================================================
-        item2: `🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА 30 ноября в 19:00
+        item2: `🙏🏻 МОЛОДЕЖНАЯ МОЛИТВА 
+28 февраля в 19:00
 Колизей, Невский 100, Малый Зал
 
 Добавить в календарь ⬇️`,
-        appleItem2: 'https://calndr.link/e/jR51bq40XN' + '?s=apple',
-        googleItem2: 'https://calndr.link/e/jR51bq40XN' + '?s=google',
+        appleItem2: 'https://calndr.link/e/SrgZ5XomQD' + '?s=apple',
+        googleItem2: 'https://calndr.link/e/SrgZ5XomQD' + '?s=google',
         calendarPic2: 'https://sun9-81.userapi.com/impg/0N1apfqSh47vU32V6LcBGGv5LPLkIuEY6qsgEw/hJN8bbw3Nzw.jpg?size=1059x1233&quality=96&sign=6609c3cc05c56d766ac4e65505dfc86a&type=album',
         // Item 3 ================================================================================
         item3: `Святое Водное Крещение 28 ноября в 15:00 в Малом Зале. 
@@ -56,7 +57,7 @@ module.exports = {
         // googleItem5: '' + '?s=google',
         calendarPic5: 'https://sun9-34.userapi.com/impg/h8EneWfB3aWPB9E_PUnDaN1ctBO71LEtwPxh1w/dkCOcOmFsyo.jpg?size=604x604&quality=96&sign=8e7c8390d3fcefdc8b8b048e19417218&type=album',
         // Item 6 ================================================================================
-        item6: `Шаг 1 "Общение" и Шаг 3 "Служение" состоится 21 ноября в кафе и тренинг-зале в 17:00
+        item6: `Шаг 1 "Общение" и Шаг 3 "Служение" состоится в кафе и тренинг-зале в 17:00
         
         Запись на стойке информации`,
         appleItem6: 'https://calndr.link/e/i326ivA6Cu' + '?s=apple',
